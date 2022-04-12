@@ -78,12 +78,22 @@ a:hover {
     justify-content: center;
 }
 
+
+label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: #55534d;
+    font-weight: 700;
+    font: "Roboto Slab";
+}
+
 .searchField {
     width: 95%;
     margin: 5px 2.5%;
 
 }
-
 
 
 .search-border {
