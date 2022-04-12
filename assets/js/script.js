@@ -54,16 +54,27 @@ function findDrinks(event) {
 // Appends all selected data to the page 
 function displayDrinks(data) {
     const drink = data;
+    // Hooking into drinkDisplay container
     const drinkDiv = document.querySelector('#drinkDisplay');
+    // Grabbing the drink name property from object
     const drinkName = drink.strDrink;
+    // creating an element to display drink name
     const heading = document.createElement("h1");
+    // Stating the drink name will be in the heading 
     heading.innerHTML = drinkName;
+    // Adding the text onto the page
     drinkDiv.appendChild(heading);
 
+    // Creating an element to add the drink image
     const drinkImg = document.createElement("img");
+    // Hooking into the data to grab the drinkImage property
     drinkImg.src = drink.strDrinkThumb;
+    // Adding the image to the page
     drinkDiv.appendChild(drinkImg);
-    
+
+
+    const drinkIngredients = document.createElement("ul");
+    drinkDiv.appendChild(drinkIngredients);
 
 }
 
