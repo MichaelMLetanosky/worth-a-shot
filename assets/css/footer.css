@@ -4,10 +4,6 @@
 	box-sizing: border-box;
 } */
 
-/* .container {
-	border: 1px dashed black; 
-} */
-
 .row {
 	display: flex;
 	flex-wrap: wrap;
@@ -57,7 +53,7 @@ ul {
 }
 
 .footer-col ul li a {
-	font-size: 18px;
+	font-size: 16px;
 	color: #ffffff;
 	text-decoration: none;
 	font-weight: 300;
