@@ -52,30 +52,22 @@ function findDrinks(event) {
 };
 
 // Appends all selected data to the page 
-function displayDrinks(data) {
-    const drink = data;
-    // Hooking into drinkDisplay container
-    const drinkDiv = document.querySelector('#drinkDisplay');
-    // Grabbing the drink name property from object
-    const drinkName = drink.strDrink;
-    // creating an element to display drink name
-    const heading = document.createElement("h1");
-    // Stating the drink name will be in the heading 
-    heading.innerHTML = drinkName;
-    // Adding the text onto the page
-    drinkDiv.appendChild(heading);
+function displayDrinks(data) {                                 // Passing data from get drinks function to displayDrinks function
+    const drink = data; 
+    const drinkDiv = document.querySelector('#drinkDisplay');  // Hooking into drinkDisplay container
+    const drinkName = drink.strDrink;                          // Grabbing the drink name property from object
+    const heading = document.createElement("h1");              // Creating an element to display drink name
+    heading.innerHTML = drinkName;                             // Stating the drink name will be in the heading 
+    drinkDiv.appendChild(heading);                             // Adding the text onto the page
 
-    // Creating an element to add the drink image
-    const drinkImg = document.createElement("img");
-    // Hooking into the data to grab the drinkImage property
-    drinkImg.src = drink.strDrinkThumb;
-    // Adding the image to the page
-    drinkDiv.appendChild(drinkImg);
+    const drinkImg = document.createElement("img");            // Creating an element to add the drink image
+    drinkImg.src = drink.strDrinkThumb;                        // Hooking into the data to grab the drinkImage property
+    drinkDiv.appendChild(drinkImg);                            // Adding the image to the page
 
-
-    const drinkIngredients = document.createElement("ul");
+    const drinkIngredients = document.createElement("ul");     // creates an unordered list element to add drink ingredients
     drinkDiv.appendChild(drinkIngredients);
 
+    // Ingredients aren't stored in an array in the API SO we must  create an object and only add ingredients that don't have a null value 
     const getIngredients = Object.keys(drink)
     .filter(function(ingredient){
         return ingredient.indexOf("strIngredient") == 0;
