@@ -46,5 +46,3 @@ function findDrinks(event) {
 
 document.getElementById("locationSrch").addEventListener("click", findBars);
 document.getElementById("ingredientSrch").addEventListener("click", findDrinks);
-
-

@@ -1,3 +1,11 @@
+:root {
+    --main-orange: #f0ab5d;
+    --accent-grey: #55534d;
+    --font: "Roboto Slab";
+    --cardcolor: #D5DBD7;
+  }
+
+
 .parent {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -28,12 +36,14 @@
 
     .div5 { 
         grid-area: 4 / 1 / 7 / 4;
-        border: 1px dashed black; 
+        border: 1px dashed black;
+        background-color: #D5DBD7; 
     }
 
     .div6 { 
         grid-area: 4 / 4 / 7 / 7;
-        border: 1px dashed black; 
+        border: 1px dashed black;
+        background-color: #D5DBD7; 
     }
 
     .div7 { 
@@ -69,15 +79,89 @@ a {
 a:hover {
     transition: all .2s ease-in-out;
     transform: scale(1.1);
+    font-family: 'Roboto Slab';
+    color: #55534d;
+    font-size: large;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: #55534d;
+    font-weight: 700;
+    font: "Roboto Slab";
 }
 
 .searchField {
     width: 95%;
     margin: 5px 2.5%;
+
 }
 
-.searchBtn {
+
+.search-border {
+    box-shadow: inset 0 0 0 4px #55534d;
+    color: #55534d;
+    transition: color 0.25s 0.0833333333s;
+    position: relative;
     width: 95%;
     margin: 5px 2.5%;
 }
+
+
+
+.search-border::before, .search-border::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+}
+.search-border::before {
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+}
+.search-border::after {
+    border-top-width: 4px;
+    border-right-width: 4px;
+  }
+  .search-border:hover {
+    color: #f0ab5d;
+  }
+  .search-border:hover::before, .search-border:hover::after {
+    border-color: #f0ab5d;
+    transition: border-color 0s, width 0.25s, height 0.25s;
+    width: 100%;
+    height: 100%;
+  }
+  .search-border:hover::before {
+    transition-delay: 0s, 0s, 0.25s;
+  }
+  .search-border:hover::after {
+    transition-delay: 0s, 0.25s, 0s;
+  }
+  
+  .btn0 {
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1.5;
+    font: 700 1.2rem "Roboto Slab", sans-serif;
+    padding: 1em 2em;
+    letter-spacing: 0.05rem;
+  }
+  .btn0:focus {
+    outline: 2px dotted #3a3f3f;
+  }
 
