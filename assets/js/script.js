@@ -5,10 +5,10 @@ const googleApiKey = "AIzaSyCbc5fH-NekhIhEMdTAUjxzRZHusawIAOA"
 //Script
 
 function findBars(event) {
-    event.preventDefault();
+    event.preventDefault ();
     console.log("clicked location search");
 
-    let cityName = document.getElementById("location").value.trim();
+    let cityName = document.getElementById("place").value;
     console.log(cityName);
     if (!cityName) {
         alert("Please enter the name of a city");
@@ -36,7 +36,7 @@ function findBars(event) {
 };
 
 function showBars(x, y) {
-    fetch (`https://floating-headland-95050.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${x}%2c${y}&radius=8500&type=bar&key=${googleApiKey}`)
+    fetch (`https://floating-headland-95050.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${x}%2c${y}&radius=8500&limit=6&type=bar&key=${googleApiKey}`)
         .then(response => {
             //Check that response came back good
             if (!response.ok) {
@@ -64,20 +64,20 @@ function findDrinks(event) {
 };
 
 // API call to receive drink data by name ie. margaraita, rum, gin etc. 
-const api_url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${ingredientName}`
-async function getDrinks() {
-const response = await fetch(api_url);
-const data = await response.json();
-console.log(data);
-data.drinks[0].strDrink;
-console.log(data.drinks[0].strDrink);
-//For Loop to cycle 
+// const api_url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${ingredientName}`
+// async function getDrinks() {
+// const response = await fetch(api_url);
+// const data = await response.json();
+// console.log(data);
+// data.drinks[0].strDrink;
+// console.log(data.drinks[0].strDrink);
+// //For Loop to cycle 
         
-//create element
+// //create element
 
-//append to display area
-}
-getDrinks ();
+// //append to display area
+// }
+//getDrinks ();
 
 
 
