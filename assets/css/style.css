@@ -52,6 +52,7 @@
         border: 1px dashed black; 
     }
 
+    /* header css start  */
 .container {
     display: flex;
     flex-direction: row;
@@ -88,6 +89,7 @@ a:hover {
     align-items: center;
     justify-content: center;
 }
+/* end header css */
 
 /* label for search buttons (search here for drink) */
 label {
@@ -99,6 +101,7 @@ label {
     font-weight: 700;
     font: "Roboto Slab";
 }
+/* end label */
 
 
 /* search box css start */
