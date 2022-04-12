@@ -76,6 +76,23 @@ function displayDrinks(data) {
     const drinkIngredients = document.createElement("ul");
     drinkDiv.appendChild(drinkIngredients);
 
+    const getIngredients = Object.keys(drink)
+    .filter(function(ingredient){
+        return ingredient.indexOf("strIngredient") == 0;
+    })
+    .reduce(function(ingredients, ingredient){
+        if (drink[ingredient] != null ){
+            ingredients[ingredient] = drink[ingredient];
+        }
+        return ingredients;
+    }, {});
+
+    for (let key in getIngredients) {
+        let value = getIngredients[key];
+        listItem = document.createElement("li");
+        listItem.innerHTML = value;
+        drinkIngredients.appendChild(listItem);
+    }
 }
 
 document.getElementById("locationSrch").addEventListener("click", findBars);
