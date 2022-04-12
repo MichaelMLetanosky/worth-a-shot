@@ -31,43 +31,41 @@ function findDrinks(event) {
         const response = await fetch(api_url);
         const data = await response.json();
         console.log(data);
-        // Retrieve specific properties from object array
-        data.drinks[0].strDrink;
-        data.drinks[0].strDrinkThumb;
-        data.drinks[0].strIngredient1;
-        data.drinks[0].strIngredient2;
-        data.drinks[0].strIngredient3;
-        data.drinks[0].strIngredient4;
-        console.log(data.drinks[0].strDrink);
-        console.log(data.drinks[0].strDrinkThumb);
-        console.log(data.drinks[0].strIngredient1);
-        console.log(data.drinks[0].strIngredient2);
-        console.log(data.drinks[0].strIngredient3);
-        console.log(data.drinks[0].strIngredient4);
-
         
-            function displayDrinks(data) {
-                const drink = data.drinks[0];
-                const drinkDiv = document.querySelector('#drinkDisplay');
-                const drinkName = drink.strDrink;
-                const heading = document.createElement("h1");
-                heading.innerHTML = drinkName;
-                drinkDiv.appendChild(heading);
-
-                const drinkImg = document.createElement("img");
-                drinkImg.src = drink.strDrinkThumb;
-                drinkDiv.appendChild(drinkImg);
-                
-
-            }
-        //create element
-
-        //append to display area
+        
+        // Inhibits the same drink showing up multiple times
+        document.querySelector("#drinkDisplay").innerHTML = ""
+        // Pagination idea for multiple page selection if we have time
+        // 20 / 6 = 3
+        // 20 % 6 = 2
+        // Grabs six random drinks from drinks array to then be ready to display
+        var drinksArr = data.drinks
+        for(i=0; i<6; i++) {
+            var randomIndex = Math.floor(Math.random() * data.drinks.length)
+            displayDrinks(drinksArr[randomIndex]);
+            drinksArr.splice(randomIndex, 1)
+        }
+        
     }
     getDrinks ();
-
+    
 };
 
+// Appends all selected data to the page 
+function displayDrinks(data) {
+    const drink = data;
+    const drinkDiv = document.querySelector('#drinkDisplay');
+    const drinkName = drink.strDrink;
+    const heading = document.createElement("h1");
+    heading.innerHTML = drinkName;
+    drinkDiv.appendChild(heading);
+
+    const drinkImg = document.createElement("img");
+    drinkImg.src = drink.strDrinkThumb;
+    drinkDiv.appendChild(drinkImg);
+    
+
+}
 
 document.getElementById("locationSrch").addEventListener("click", findBars);
 document.getElementById("ingredientSrch").addEventListener("click", findDrinks);
