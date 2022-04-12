@@ -1,3 +1,11 @@
+:root {
+    --main-orange: #f0ab5d;
+    --accent-grey: #55534d;
+    --font: "Roboto Slab";
+    --cardcolor: #D5DBD7;
+  }
+
+  
 .parent {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
