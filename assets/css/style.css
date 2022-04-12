@@ -17,6 +17,9 @@
     .div1 {
         grid-area: 1 / 1 / 3 / 7;
         border: 1px dashed black;
+        height: 150px;
+        
+        
     }
     
     .div2 { 
