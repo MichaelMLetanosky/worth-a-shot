@@ -61,32 +61,26 @@ function findDrinks(event) {
         alert("Please enter an ingredient");
         return;
     };
-<<<<<<< HEAD
-=======
-
-        // API call to receive drink data by name ie. margaraita, rum, gin etc. 
-        const api_url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${ingredientName}`
-        async function getDrinks() {
-        const response = await fetch(api_url);
-        const data = await response.json();
-        console.log(data);
-        data.drinks[0].strDrink;
-        console.log(data.drinks[0].strDrink);
-        //For Loop to cycle 
-        
-        //create element
-
-        //append to display area
-    }
-    getDrinks ();
-
->>>>>>> 03ed5f401582257ea1202ce508832ad27b541bb7
 };
+
+// API call to receive drink data by name ie. margaraita, rum, gin etc. 
+const api_url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${ingredientName}`
+async function getDrinks() {
+const response = await fetch(api_url);
+const data = await response.json();
+console.log(data);
+data.drinks[0].strDrink;
+console.log(data.drinks[0].strDrink);
+//For Loop to cycle 
+        
+//create element
+
+//append to display area
+}
+getDrinks ();
+
+
 
 
 document.getElementById("locationSrch").addEventListener("click", findBars);
-<<<<<<< HEAD
 document.getElementById("ingredientSrch").addEventListener("click", findDrinks);
-=======
-document.getElementById("ingredientSrch").addEventListener("click", findDrinks);
->>>>>>> 03ed5f401582257ea1202ce508832ad27b541bb7
