@@ -24,6 +24,8 @@ function findDrinks(event) {
         alert("Please enter an ingredient");
         return;
     };
+<<<<<<< HEAD
+=======
 
         // API call to receive drink data by name ie. margaraita, rum, gin etc. 
         const api_url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${ingredientName}`
@@ -41,8 +43,13 @@ function findDrinks(event) {
     }
     getDrinks ();
 
+>>>>>>> 03ed5f401582257ea1202ce508832ad27b541bb7
 };
 
 
 document.getElementById("locationSrch").addEventListener("click", findBars);
+<<<<<<< HEAD
 document.getElementById("ingredientSrch").addEventListener("click", findDrinks);
+=======
+document.getElementById("ingredientSrch").addEventListener("click", findDrinks);
+>>>>>>> 03ed5f401582257ea1202ce508832ad27b541bb7

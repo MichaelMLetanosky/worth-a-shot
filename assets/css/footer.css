@@ -1,0 +1,83 @@
+/* * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+} */
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+ul {
+	list-style: none;
+}
+
+.footer {
+	background-color: #656461;
+	padding: 50px 0;
+	width: 100%;
+}
+
+.footer-col {
+	width: auto;
+	padding: 0 100px;
+	display: block;
+	justify-content: center;
+}
+
+/* Group Members */
+.footer-col h4 {
+	font-size: 18px;
+	color: #ffffff;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+	font-family: 'Poppins', sans-serif;
+
+}
+/* orange line underneathe names */
+.footer-col h4::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	background-color: #F0AB5D;
+	height: 2px;
+	width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+	font-size: 16px;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	position: relative;
+	transition: all 0.3s ease;
+}
+
+/* hover effect for links */
+.footer-col ul li a:hover {
+	color: #ffffff;
+	padding-left: 8px;
+}
+
+/*responsive*/
+@media(max-width: 767px) {
+	.footer-col {
+		width: 50%;
+		margin-bottom: 30px;
+	}
+}
+
+@media(max-width: 574px) {
+	.footer-col {
+		width: 100%;
+	}
+}
