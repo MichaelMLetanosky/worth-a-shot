@@ -52,22 +52,12 @@
         grid-area: 7 / 1 / 8 / 8;
         border: 1px dashed black; 
     }
-<<<<<<< HEAD
-/* 
-=======
-
->>>>>>> 03ed5f401582257ea1202ce508832ad27b541bb7
 .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-<<<<<<< HEAD
-
-} */
-=======
 }
->>>>>>> 03ed5f401582257ea1202ce508832ad27b541bb7
 
 h1 {
     font-family: 'Luckiest Guy', cursive;
@@ -90,8 +80,6 @@ a {
 a:hover {
     transition: all .2s ease-in-out;
     transform: scale(1.1);
-<<<<<<< HEAD
-=======
     font-family: 'Roboto Slab';
     color: #55534d;
     font-size: large;
@@ -110,17 +98,11 @@ label {
     color: #55534d;
     font-weight: 700;
     font: "Roboto Slab";
->>>>>>> 03ed5f401582257ea1202ce508832ad27b541bb7
 }
 
 .searchField {
     width: 95%;
     margin: 5px 2.5%;
-<<<<<<< HEAD
-}
-
-.searchBtn {
-=======
 
 }
 
@@ -130,13 +112,10 @@ label {
     color: #55534d;
     transition: color 0.25s 0.0833333333s;
     position: relative;
->>>>>>> 03ed5f401582257ea1202ce508832ad27b541bb7
     width: 95%;
     margin: 5px 2.5%;
 }
 
-<<<<<<< HEAD
-=======
 
 
 .search-border::before, .search-border::after {
@@ -187,4 +166,3 @@ label {
     outline: 2px dotted #3a3f3f;
   }
 
->>>>>>> 03ed5f401582257ea1202ce508832ad27b541bb7
