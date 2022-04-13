@@ -89,5 +89,3 @@ function displayDrinks(data) {                                 // Passing data f
 
 document.getElementById("locationSrch").addEventListener("click", findBars);
 document.getElementById("ingredientSrch").addEventListener("click", findDrinks);
-
-
