@@ -1,0 +1,29 @@
+body, html {
+    height: 100%;
+  }
+  
+  .bgimg {
+    background-image: url("https://images.pexels.com/photos/2796105/pexels-photo-2796105.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    opacity: .9;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .caption {
+      position: absolute;
+      left: 0;
+      top: 10%;
+      width: 100%;
+      display: block;
+      text-align: center;
+  }
+
+  .caption span.border {
+      color: white;
+      padding: 20px;
+      font-family: 'Roboto Slab';
+      font-size: 50px;
+      letter-spacing: 3px;
+  }
