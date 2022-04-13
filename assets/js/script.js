@@ -127,7 +127,7 @@ function displayDrinks(data) {                                 // Passing data f
     const drink = data; 
     const drinkDiv = document.querySelector('#drinkDisplay');  // Hooking into drinkDisplay container
     const drinkName = drink.strDrink;                          // Grabbing the drink name property from object
-    const heading = document.createElement("h1");              // Creating an element to display drink name
+    const heading = document.createElement("h2");              // Creating an element to display drink name
     heading.innerHTML = drinkName;                             // Stating the drink name will be in the heading 
     drinkDiv.appendChild(heading);                             // Adding the text onto the page
 

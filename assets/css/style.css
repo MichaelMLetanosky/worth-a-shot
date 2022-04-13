@@ -245,3 +245,9 @@ ul {
 }
 
 /* Drink Display Cards */
+img {
+    height: auto;
+    width: auto;
+    max-width: 200px;
+    max-height: 200px;
+}
