@@ -44,7 +44,19 @@ header {
 }
 
 .logo-container {
-    
+    height: 100%;
+    display: table;
+    float: left;
+}
+
+.logo-container h1 {
+    color: black;
+    height: 100%;
+    display: table-cell;
+    vertical-align: bottom;
+    font-family: 'Luckiest Guy';
+    font-size: 32px;    
+    font-weight: 200;
 }
 
 
