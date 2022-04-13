@@ -58,7 +58,6 @@ h1 {
     font-family: 'Luckiest Guy', cursive;
     text-indent: 400px;
     display: inline-block;
-    text-align: bottom;
 }
 
 header {
@@ -244,3 +243,5 @@ ul {
 		width: 100%;
 	}
 }
+
+/* Drink Display Cards */
