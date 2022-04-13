@@ -19,20 +19,11 @@ function yesFunction(event){
 
 //function for no button
 function noFunction(event){
-  
   console.log("noFunction");
 };
 //call function for yesbtn
 yesBtn.addEventListener ("click", yesFunction);
 
 noBtn.addEventListener ("click", noFunction);
-
-
-
-
-
-
-
-
 
 
