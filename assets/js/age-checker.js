@@ -9,5 +9,11 @@ var noBtn = document.querySelector("noBtn")
 window.onload = function() {
   document.getElementById("modal").style.display = "block";
 
-
 }
+// yesBtn.onclick = function(event) {
+//   console.log("Clicked yes");
+// }
+
+
+
+// noBtn.onclick
