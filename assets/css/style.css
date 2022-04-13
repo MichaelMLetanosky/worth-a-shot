@@ -6,54 +6,18 @@
   }
 /* root variables for theme */
 
-.parent {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(7, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 20px;
+main {
+    display: flex;
 }
-    
-    .div1 {
-        grid-area: 1 / 1 / 3 / 7;
-        border: 1px dashed black;
-    }
-    
-    .div2 { 
-        grid-area: 2 / 6 / 3 / 7;
-        border: 1px dashed black; 
-    }
 
-    .div3 { 
-        grid-area: 3 / 1 / 4 / 4;
-        border: 1px dashed black; 
-    }
+main section {
+    width: 48%
+}
 
-    .div4 { 
-        grid-area: 3 / 4 / 4 / 7;
-        border: 1px dashed black; 
-    }
-
-    .div5 { 
-        grid-area: 4 / 1 / 7 / 4;
-        border: 1px dashed black;
-        background-color: #D5DBD7; 
-    }
-
-    .div6 { 
-        grid-area: 4 / 4 / 7 / 7;
-        border: 1px dashed black;
-        background-color: #D5DBD7; 
-    }
-
-
-    .div7 { 
-        grid-area: 7 / 1 / 8 / 8;
-        border: 1px dashed black; 
-    }
-
-    /* header css start  */
+/* header css start  */
 .container {
+    width: 100%;
+    height: 125px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
