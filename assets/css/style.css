@@ -30,26 +30,30 @@ header .logo{
 header .logo div{
     height: 200%;
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: bottom;
     font-size: xxx-large;
-    margin: ;
+    
 }
 
 header nav{
     float: right;
     height: 100%;
-    vertical-align: bottom;
+    /* vertical-align: middle; */
 }
 
 header nav li{
-    display: table;
+    display: flex;
     height: 100%;
     float: left;
     margin-right: 30px;
+    align-items: flex-end;
+    justify-content: center;
+
 }
 
 header nav li:last-of-type{
     margin-right: 0;
+
 }
 
 header nav span {
@@ -64,8 +68,6 @@ header nav a{
 header nav .button{
     background-color: #f0ab5d; 
     color: #101010;
-    padding: 10px 20px;
-    border-radius: 4px;
     
 }
 
