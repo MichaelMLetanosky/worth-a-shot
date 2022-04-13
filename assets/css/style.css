@@ -9,7 +9,7 @@
 /* header css start  */
 header{
     width: 100vw;
-    height: 150px;
+    height: 140px;
     font-family: 'Luckiest Guy', cursive;
     background-color: #f0ab5d;
 }
@@ -38,7 +38,7 @@ header .logo div{
 header nav{
     float: right;
     height: 100%;
-    /* vertical-align: middle; */
+
 }
 
 header nav li{
@@ -83,6 +83,7 @@ header nav .button:hover{
 
 main {
     display: flex;
+    padding: 40px;
 }
 
 main section {
