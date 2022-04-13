@@ -1,20 +1,20 @@
 //Global Variables
 
-const googleApiKey = "AIzaSyCbc5fH-NekhIhEMdTAUjxzRZHusawIAOA"
+const googleApiKey = "AIzaSyCbc5fH-NekhIhEMdTAUjxzRZHusawIAOA";
 
 //Script
-
+//Uses input from city search and gets latitude and logitude for the showBars function
 function findBars(event) {
     event.preventDefault ();
-    console.log("clicked location search");
 
+    //Checks that a city name was entered
     let cityName = document.getElementById("place").value;
-    console.log(cityName);
     if (!cityName) {
         alert("Please enter the name of a city");
         return;
     };
 
+    //Geolocates using googleAPI to find latitude and logitude
     fetch (`https://maps.googleapis.com/maps/api/geocode/json?address=${cityName}&key=${googleApiKey}`)
         .then(response => {
             //Check that response came back good
@@ -26,17 +26,18 @@ function findBars(event) {
             return response.json();
         })
         .then(data => {
-            console.log(data) 
-            let locationLat = data.results[0].geometry.location.lat
-            let locationLng = data.results[0].geometry.location.lng
-            console.log (locationLat)
-            console.log (locationLng)
-            showBars (locationLat, locationLng)
+            //Gets latitude and logitude from the data and passes to the shows Bars function
+            let locationLat = data.results[0].geometry.location.lat;
+            let locationLng = data.results[0].geometry.location.lng;
+            console.log (locationLat);
+            console.log (locationLng);
+            showBars (locationLat, locationLng);
         })   
 };
 
+//Uses latitude and longitude to get nearby bars from google places and creates business cards for bars
 function showBars(x, y) {
-    fetch (`https://floating-headland-95050.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${x}%2c${y}&radius=8500&type=bar&key=${googleApiKey}`)
+    fetch (`https://floating-headland-95050.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${x}%2c${y}&radius=8500&type=bar&opennow=true&key=${googleApiKey}`)
         .then(response => {
             //Check that response came back good
             if (!response.ok) {
@@ -47,9 +48,40 @@ function showBars(x, y) {
             return response.json();
         })
         .then(data => {
-            console.log(data.results) 
+            console.log(data.results)
+            for (let i = 0; i < 6 && i < data.results.length; i++) {
+                let barCard = document.createElement("div");
+                barCard.classList.add("barCard");
+                document.querySelector(".barCardCont").appendChild(barCard);
+                
+                //Set the name
+                let barName = data.results[i].name;
+                let barNameCont = document.createElement("p");
+                barNameCont.innerHTML = barName;
+                document.querySelectorAll(".barCard")[i].appendChild(barNameCont);
+                //Set the address
+                let barAddress = data.results[i].vicinity;
+                let barAddressCont = document.createElement("p");
+                barAddressCont.innerHTML = barAddress;
+                document.querySelectorAll(".barCard")[i].appendChild(barAddressCont);
+                //Gets additional details for location
+                let placeID = data.results[i].place_ID
+                console.log(placeID)
+                fetch (`https://floating-headland-95050.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?&place_id=${placeID}&key=${googleApiKey}`)
+                    .then(response => {
+                        //Check that response came back good
+                        if (!response.ok) {
+                            return;
+                        };
+        
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log(data)
+                    })
+            }
         })
-}
+};
 
 function findDrinks(event) {
     event.preventDefault();
