@@ -35,9 +35,10 @@
     }
 
     .div5 { 
+        background-color: #D5DBD7; 
         grid-area: 4 / 1 / 7 / 4;
         border: 1px dashed black;
-        background-color: #D5DBD7; 
+        z-index: -3;
     }
 
     .div6 { 
