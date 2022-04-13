@@ -36,7 +36,7 @@ function findBars(event) {
 };
 
 function showBars(x, y) {
-    fetch (`https://floating-headland-95050.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${x}%2c${y}&radius=8500&limit=6&type=bar&key=${googleApiKey}`)
+    fetch (`https://floating-headland-95050.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${x}%2c${y}&radius=8500&type=bar&key=${googleApiKey}`)
         .then(response => {
             //Check that response came back good
             if (!response.ok) {
