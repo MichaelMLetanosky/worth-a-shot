@@ -129,7 +129,7 @@ function findDrinks(event) {
         
         
         // Inhibits the same drink showing up multiple times
-        document.querySelector("#drinkDisplay").innerHTML = ""
+        document.querySelector(".drinkCardCont").innerHTML = ""
         // Pagination idea for multiple page selection if we have time
         // 20 / 6 = 3
         // 20 % 6 = 2
@@ -149,7 +149,10 @@ function findDrinks(event) {
 // Appends all selected data to the page 
 function displayDrinks(data) {                                 // Passing data from get drinks function to displayDrinks function
     const drink = data; 
-    const drinkDiv = document.querySelector('#drinkDisplay');  // Hooking into drinkDisplay container
+    let drinkDiv = document.createElement("div");
+    drinkDiv.classList.add("drinkCard");
+    document.querySelector(".drinkCardCont").appendChild(drinkDiv);
+    // const drinkDiv = document.querySelector('.drinkCard');  // Hooking into drinkDisplay container
     const drinkName = drink.strDrink;                          // Grabbing the drink name property from object
     const heading = document.createElement("h2");              // Creating an element to display drink name
     heading.innerHTML = drinkName;                             // Stating the drink name will be in the heading 
