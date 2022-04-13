@@ -21,7 +21,6 @@ body, html {
   }
 
   .caption span.border {
-      background-color: black;
       color: white;
       padding: 20px;
       font-family: 'Roboto Slab';
