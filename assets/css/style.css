@@ -33,6 +33,7 @@ main section {
     }
 
     .div6 { 
+        
         grid-area: 4 / 4 / 7 / 7;
         border: 1px dashed black;
         background-color: #D5DBD7; 
