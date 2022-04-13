@@ -7,26 +7,6 @@
 /* root variables for theme */
 
 /* header css start  */
-/* .heading {
-    width: 100%;
-    height: 125px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-h1 {
-    font-family: 'Luckiest Guy', cursive;
-    text-indent: 400px;
-    display: inline-block;
-    text-align: center;
-    justify-content: baseline;
-}
-
-header {
-    background-color: var(--main-orange);
-} */
 
 .header {
     width: 100%;
@@ -51,22 +31,16 @@ header {
 
 .logo-container h1 {
     color: black;
+    font-family: 'Luckiest Guy', cursive;
     height: 100%;
     display: table-cell;
     vertical-align: bottom;
-    font-family: 'Luckiest Guy';
     font-size: 32px;    
     font-weight: 200;
 }
 
-.logo-container h1 span {
-    font-weight: 1000;
-}
 
-
-
-
-a {
+.inner_header a {
     float: right;
     padding: 0 25px 0 0;
     font-family: 'Roboto Slab';  
@@ -74,7 +48,7 @@ a {
     color:black
 }
 
-a:hover {
+.inner_header a:hover {
     transition: all .2s ease-in-out;
     transform: scale(1.1);
     font-family: 'Roboto Slab';
