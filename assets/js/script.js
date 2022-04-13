@@ -25,6 +25,7 @@ function findDrinks(event) {
         return;
     };
 
+
         // API call to receive drink data by name ie. margaraita, rum, gin etc. 
         const api_url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${ingredientName}`
         async function getDrinks() {
@@ -48,7 +49,7 @@ function findDrinks(event) {
         
     }
     getDrinks ();
-    
+
 };
 
 // Appends all selected data to the page 
@@ -88,4 +89,6 @@ function displayDrinks(data) {                                 // Passing data f
 }
 
 document.getElementById("locationSrch").addEventListener("click", findBars);
+
 document.getElementById("ingredientSrch").addEventListener("click", findDrinks);
+
