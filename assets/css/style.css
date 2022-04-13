@@ -6,24 +6,17 @@
   }
 /* root variables for theme */
 
-.parent {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(7, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 20px;
+main {
+    display: flex;
 }
-    
-    .div1 {
-        grid-area: 1 / 1 / 3 / 7;
-        border: 1px dashed black;
-    }
-    
-    .div2 { 
-        grid-area: 2 / 6 / 3 / 7;
-        border: 1px dashed black; 
-    }
 
+<<<<<<< HEAD
+main section {
+    width: 48%
+}
+
+/* header css start  */
+=======
     .div3 { 
         grid-area: 3 / 1 / 4 / 4;
         /* border: 1px dashed black;  */
@@ -54,7 +47,10 @@
     }
 
     /* header css start  */
+>>>>>>> 4d73b87ab4e13d7dc1a925859c9f5edd150c1e20
 .container {
+    width: 100%;
+    height: 125px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
