@@ -7,58 +7,74 @@
 /* root variables for theme */
 
 /* header css start  */
-
-.header {
-    width: 100%;
-    height: 80px;
-    display: block;
+header{
+    width: 100vw;
+    height: 150px;
+    font-family: 'Luckiest Guy', cursive;
     background-color: #f0ab5d;
 }
 
-.inner_header {
-    width: 1000px;
+header .inside{
+    width: 1300px; /* This is the inner width of the content inside of your header (80%, etc) */
     height: 100%;
     display: block;
     margin: 0 auto;
-    background-color: red;
 }
 
-.logo-container {
-    height: 100%;
+header .logo{
     display: table;
+    height: 100%;
     float: left;
 }
 
-.logo-container h1 {
-    color: black;
-    font-family: 'Luckiest Guy', cursive;
+header .logo div{
     height: 100%;
     display: table-cell;
-    vertical-align: bottom;
-    font-size: 32px;    
-    font-weight: 200;
+    vertical-align: middle;
 }
 
+header .logo img{
+    height: 50px;
+    margin-top: 5px; /* Optical alignment of the logo */
+}
 
-.inner_header a {
+header nav{
     float: right;
-    padding: 0 25px 0 0;
-    font-family: 'Roboto Slab';  
-    text-decoration: none;
-    color:black
+    height: 100%;
 }
 
-.inner_header a:hover {
-    transition: all .2s ease-in-out;
-    transform: scale(1.1);
-    font-family: 'Roboto Slab';
-    color: #55534d;
-    font-size: large;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+header nav li{
+    display: table;
+    height: 100%;
+    float: left;
+    margin-right: 30px;
 }
+
+header nav li:last-of-type{
+    margin-right: 0;
+}
+
+header nav span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+header nav a{
+    color: #101010;
+}
+
+header nav .button{
+    background-color: #f0ab5d; 
+    color: #101010;
+    padding: 10px 20px;
+    border-radius: 4px;
+    
+}
+
+header nav .button:hover{
+    filter: brightness(1.05);
+}
+
 /* end header css */
 
 
