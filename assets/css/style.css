@@ -6,16 +6,8 @@
   }
 /* root variables for theme */
 
-main {
-    display: flex;
-}
-
-main section {
-    width: 48%
-}
-
 /* header css start  */
-.container {
+/* .heading {
     width: 100%;
     height: 125px;
     display: flex;
@@ -28,12 +20,36 @@ h1 {
     font-family: 'Luckiest Guy', cursive;
     text-indent: 400px;
     display: inline-block;
-    text-align: bottom;
+    text-align: center;
+    justify-content: baseline;
 }
 
 header {
     background-color: var(--main-orange);
+} */
+
+.header {
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-color: #f0ab5d;
 }
+
+.inner_header {
+    width: 1000px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    background-color: red;
+}
+
+.logo-container {
+    
+}
+
+
+
+
 
 a {
     float: right;
@@ -55,6 +71,17 @@ a:hover {
     justify-content: center;
 }
 /* end header css */
+
+
+main {
+    display: flex;
+}
+
+main section {
+    width: 48%
+}
+
+
 
 /* label for search buttons (search here for drink) */
 label {
