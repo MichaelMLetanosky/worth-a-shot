@@ -56,7 +56,7 @@ header nav li:last-of-type{
 
 header nav span {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: text-bottom;
 }
 
 header nav a{
@@ -72,7 +72,10 @@ header nav .button{
 }
 
 header nav .button:hover{
-    filter: brightness(1.05);
+    transition: all .2s ease-in-out;
+    transform: scale(1.1);
+    color: #101010;
+    font-size: large;
 }
 
 /* end header css */
