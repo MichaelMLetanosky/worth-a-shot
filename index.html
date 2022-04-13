@@ -8,7 +8,9 @@
   <!-- Third Party Links -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
   <!-- Custom Links -->
   <link rel="stylesheet" href="./assets/css/reset.css" />
   <link rel="icon" href="./assets/images/worth-a-shot-icon.png">
@@ -20,14 +22,17 @@
   <div class="parent">
     <!-- Header -->
     <header>
-      <div class="container">
-        <h1>Worth a Shot<img src="./assets/images/shot (1).png" alt="shot-icon"></h1> 
-        <nav> 
-          <a href="favorites.html">Favorites</a>
-        </nav>
-      </div>  
-    </header>
-
+      <div class="inside">
+          <div class="logo">
+              <div>
+                <h1>Worth a Shot<img src="./assets/images/shot (1).png" alt="shot-icon"></h1> 
+              </div>
+          </div>
+          <nav>
+              <li><span><a href="favorites.html" class="button">Favorites</a></span></li>
+          </nav>
+      </div>
+  </header>
     <!-- Main Area -->
     <main>
       <!-- Drink Search -->
@@ -50,9 +55,7 @@
         <div class="barCardCont"> </div>
       </section>
     </main>
-    
-    
-    
+
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
