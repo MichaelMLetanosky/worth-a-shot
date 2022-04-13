@@ -6,5 +6,8 @@ var yesBtn = document.querySelector("yesBtn");
 var noBtn = document.querySelector("noBtn")
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
+window.onload = function() {
+  document.getElementById("modal").style.display = "block";
+
+
 }
