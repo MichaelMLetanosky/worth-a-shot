@@ -37,6 +37,14 @@ function findBars(event) {
 
 //Uses latitude and longitude to get nearby bars from google places and creates business cards for bars
 function showBars(x, y) {
+    //Clear current display area 
+    var e = document.querySelector(".barCardCont");
+    var child = e.lastElementChild; 
+    while (child) {
+        e.removeChild(child);
+        child = e.lastElementChild;
+    };
+
     fetch (`https://floating-headland-95050.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${x}%2c${y}&radius=8500&type=bar&opennow=true&key=${googleApiKey}`)
         .then(response => {
             //Check that response came back good
@@ -56,7 +64,7 @@ function showBars(x, y) {
                 
                 //Set the name
                 let barName = data.results[i].name;
-                let barNameCont = document.createElement("p");
+                let barNameCont = document.createElement("a");
                 barNameCont.innerHTML = barName;
                 document.querySelectorAll(".barCard")[i].appendChild(barNameCont);
                 //Set the address
@@ -65,7 +73,7 @@ function showBars(x, y) {
                 barAddressCont.innerHTML = barAddress;
                 document.querySelectorAll(".barCard")[i].appendChild(barAddressCont);
                 //Gets additional details for location
-                let placeID = data.results[i].place_ID
+                let placeID = data.results[i].place_id
                 console.log(placeID)
                 fetch (`https://floating-headland-95050.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?&place_id=${placeID}&key=${googleApiKey}`)
                     .then(response => {
@@ -77,9 +85,24 @@ function showBars(x, y) {
                         return response.json();
                     })
                     .then(data => {
-                        console.log(data)
+                        console.log(data.result)
+                        //Set the phone number
+                        let barPhone = data.result.formatted_phone_number;
+                        if (barPhone) {
+                            let barPhoneCont = document.createElement("p");
+                            barPhoneCont.innerHTML = `Phone: ${barPhone}`;
+                            document.querySelectorAll(".barCard")[i].appendChild(barPhoneCont);
+                        };
+                        //Set the rating
+                        let barRating = data.result.rating;
+                        let barRatingCont = document.createElement("p");
+                        barRatingCont.innerHTML = `Rating: ${barRating}`;
+                        document.querySelectorAll(".barCard")[i].appendChild(barRatingCont);
+                        //Set url
+                        let barURL = data.result.url;
+                        document.querySelectorAll(".barCard")[i].querySelector("a").setAttribute ("href", barURL)
                     })
-            }
+            };
         })
 };
 
