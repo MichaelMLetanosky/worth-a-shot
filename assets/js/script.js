@@ -29,8 +29,6 @@ function findBars(event) {
             //Gets latitude and logitude from the data and passes to the shows Bars function
             let locationLat = data.results[0].geometry.location.lat;
             let locationLng = data.results[0].geometry.location.lng;
-            console.log (locationLat);
-            console.log (locationLng);
             showBars (locationLat, locationLng);
         })   
 };
@@ -64,6 +62,11 @@ function showBars(x, y) {
                 barCard.classList.add("barCard");
                 document.querySelector(".barCardCont").appendChild(barCard);
                 
+                //Set bar photo
+                let photoRef = data.results[i].photos[0].photo_reference
+                let barPicCont = document.createElement("img");
+                barPicCont.src = `https://maps.googleapis.com/maps/api/place/photo?maxheight=150&maxwidth=300&photo_reference=${photoRef}&key=${googleApiKey}`;
+                document.querySelectorAll(".barCard")[i].appendChild(barPicCont);
                 //Set the name
                 let barName = data.results[i].name;
                 let barNameCont = document.createElement("a");
@@ -82,7 +85,7 @@ function showBars(x, y) {
                         if (!response.ok) {
                             return;
                         };
-        
+
                         return response.json();
                     })
                     .then(data => {
@@ -102,7 +105,7 @@ function showBars(x, y) {
                         //Set url to make the place name link to it on google maps
                         let barURL = data.result.url;
                         document.querySelectorAll(".barCard")[i].querySelector("a").setAttribute ("href", barURL);
-                    })
+            })
             };
         })
 };
