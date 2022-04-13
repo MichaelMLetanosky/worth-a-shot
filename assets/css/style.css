@@ -163,6 +163,23 @@ ul {
 	list-style: none;
 }
 
+.barCardCont {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.barCard {
+    margin: 3px;
+    width: 48%;
+    background-color: var(--cardcolor);
+}
+
+.barCard a {
+    font-size: 22px;  
+    text-decoration: none;
+    color:black
+}
+
 .footer {
 	background-color: #656461;
 	padding: 50px 0;
