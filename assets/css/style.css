@@ -15,6 +15,37 @@ main section {
 }
 
 /* header css start  */
+    .div3 { 
+        grid-area: 3 / 1 / 4 / 4;
+        /* border: 1px dashed black;  */
+    }
+
+    .div4 { 
+        grid-area: 3 / 4 / 4 / 7;
+        /* border: 1px dashed black;  */
+    }
+
+    .div5 { 
+        background-color: #D5DBD7; 
+        grid-area: 4 / 1 / 7 / 4;
+        border: 1px dashed black;
+        z-index: -3;
+    }
+
+    .div6 { 
+        
+        grid-area: 4 / 4 / 7 / 7;
+        border: 1px dashed black;
+        background-color: #D5DBD7; 
+    }
+
+
+    .div7 { 
+        grid-area: 7 / 1 / 8 / 8;
+        /* border: 1px dashed black;  */
+    }
+
+    /* header css start  */
 .container {
     width: 100%;
     height: 125px;
@@ -28,7 +59,6 @@ h1 {
     font-family: 'Luckiest Guy', cursive;
     text-indent: 400px;
     display: inline-block;
-    text-align: bottom;
 }
 
 header {
@@ -230,4 +260,12 @@ ul {
 	.footer-col {
 		width: 100%;
 	}
+}
+
+/* Drink Display Cards */
+img {
+    height: auto;
+    width: auto;
+    max-width: 200px;
+    max-height: 200px;
 }
