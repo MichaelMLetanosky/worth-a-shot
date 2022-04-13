@@ -45,6 +45,7 @@ function showBars(x, y) {
         child = e.lastElementChild;
     };
 
+    //Fetch data from Google Near By Places
     fetch (`https://floating-headland-95050.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${x}%2c${y}&radius=8500&type=bar&opennow=true&key=${googleApiKey}`)
         .then(response => {
             //Check that response came back good
@@ -56,8 +57,9 @@ function showBars(x, y) {
             return response.json();
         })
         .then(data => {
-            console.log(data.results)
+            //Makes cards for up to 6 business or as many business are returned
             for (let i = 0; i < 6 && i < data.results.length; i++) {
+                //Makes the card to contain the information
                 let barCard = document.createElement("div");
                 barCard.classList.add("barCard");
                 document.querySelector(".barCardCont").appendChild(barCard);
@@ -72,9 +74,8 @@ function showBars(x, y) {
                 let barAddressCont = document.createElement("p");
                 barAddressCont.innerHTML = barAddress;
                 document.querySelectorAll(".barCard")[i].appendChild(barAddressCont);
-                //Gets additional details for location
-                let placeID = data.results[i].place_id
-                console.log(placeID)
+                //Gets additional details for location then uses Places Detail search for even more info
+                let placeID = data.results[i].place_id;
                 fetch (`https://floating-headland-95050.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?&place_id=${placeID}&key=${googleApiKey}`)
                     .then(response => {
                         //Check that response came back good
@@ -85,9 +86,9 @@ function showBars(x, y) {
                         return response.json();
                     })
                     .then(data => {
-                        console.log(data.result)
                         //Set the phone number
                         let barPhone = data.result.formatted_phone_number;
+                        //Checks that a phone number is listed before setting it
                         if (barPhone) {
                             let barPhoneCont = document.createElement("p");
                             barPhoneCont.innerHTML = `Phone: ${barPhone}`;
@@ -98,9 +99,9 @@ function showBars(x, y) {
                         let barRatingCont = document.createElement("p");
                         barRatingCont.innerHTML = `Rating: ${barRating}`;
                         document.querySelectorAll(".barCard")[i].appendChild(barRatingCont);
-                        //Set url
+                        //Set url to make the place name link to it on google maps
                         let barURL = data.result.url;
-                        document.querySelectorAll(".barCard")[i].querySelector("a").setAttribute ("href", barURL)
+                        document.querySelectorAll(".barCard")[i].querySelector("a").setAttribute ("href", barURL);
                     })
             };
         })
