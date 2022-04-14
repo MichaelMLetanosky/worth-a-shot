@@ -255,12 +255,10 @@ img {
 }
 
 .barCard img {
-    /* display: block;
-    margin: 4px auto; */
     height: auto;
     width: auto;
-    max-width: 229px;
-    max-height: 229px;
+    max-width: 413px;
+    max-height: 231px;
     margin-bottom: 3px;
 }
 
