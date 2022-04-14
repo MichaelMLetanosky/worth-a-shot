@@ -3,7 +3,8 @@
     --accent-grey: #55534d;
     --font: "Roboto Slab";
     --cardcolor: #D5DBD7;
-  }
+}
+
 /* root variables for theme ^ */
 
 /* modal start */
@@ -13,16 +14,18 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-  }
-  .noBtn {
-      margin-left: 20px;
-  }
-  
+}
+
+.noBtn {
+    margin-left: 20px;
+}
+
 
 /* saying that the page will be using flexbox */
 main {
     display: flex;
     padding: 40px;
+    background-color: white;
 }
 
 main section {
@@ -31,41 +34,43 @@ main section {
 
 
 /* header css start  */
-header{
+header {
     width: 100vw;
     height: 140px;
     font-family: 'Luckiest Guy', cursive;
     background-color: #f0ab5d;
 }
 
-header .inside{
-    width: 1300px; 
+header .inside {
+    width: 1300px;
     height: 100%;
     display: block;
     margin: 0 auto;
 }
 
-header .logo{
+.logo {
     display: table;
     height: 100%;
     float: left;
+    color: black;
 }
 
-header .logo div{
+header .logo div {
     height: 200%;
     display: table-cell;
     vertical-align: bottom;
     font-size: xxx-large;
-    
+
 }
+
 /* this is for the favorites button */
-header nav{
+header nav {
     float: right;
     height: 100%;
 
 }
 
-header nav li{
+header nav li {
     display: flex;
     height: 100%;
     float: left;
@@ -75,7 +80,7 @@ header nav li{
 
 }
 
-header nav li:last-of-type{
+header nav li:last-of-type {
     margin-right: 0;
 }
 
@@ -84,27 +89,31 @@ header nav span {
     vertical-align: text-bottom;
 }
 
-header nav a{
+header nav a {
     color: #101010;
 }
 
-header nav .button{
-    background-color: #f0ab5d; 
+header nav .button {
+    background-color: #f0ab5d;
     color: #101010;
-    
+
 }
 
-header nav .button:hover{
+header nav .button:hover {
     transition: all .2s ease-in-out;
     transform: scale(1.1);
     color: #101010;
     font-size: large;
+
 }
 
 /* end header css */
 
 
 /* label for search buttons (search here for drink) */
+
+
+
 label {
     display: flex;
     align-items: center;
@@ -114,6 +123,7 @@ label {
     font-weight: 700;
     font: "Roboto Slab";
 }
+
 /* end label */
 
 
@@ -121,7 +131,9 @@ label {
 .searchField {
     width: 95%;
     margin: 5px 2.5%;
+    border: solid 1px black;
 }
+
 /* search box css end */
 
 
@@ -135,7 +147,8 @@ label {
     margin: 5px 2.5%;
 }
 
-.search-border::before, .search-border::after {
+.search-border::before,
+.search-border::after {
     border: 0 solid transparent;
     box-sizing: border-box;
     content: "";
@@ -146,31 +159,38 @@ label {
     bottom: 0;
     right: 0;
 }
+
 .search-border::before {
     border-bottom-width: 4px;
     border-left-width: 4px;
 }
+
 .search-border::after {
     border-top-width: 4px;
     border-right-width: 4px;
-  }
-  .search-border:hover {
+}
+
+.search-border:hover {
     color: #f0ab5d;
-  }
-  .search-border:hover::before, .search-border:hover::after {
+}
+
+.search-border:hover::before,
+.search-border:hover::after {
     border-color: #f0ab5d;
     transition: border-color 0s, width 0.25s, height 0.25s;
     width: 100%;
     height: 100%;
-  }
-  .search-border:hover::before {
+}
+
+.search-border:hover::before {
     transition-delay: 0s, 0s, 0.25s;
-  }
-  .search-border:hover::after {
+}
+
+.search-border:hover::after {
     transition-delay: 0s, 0.25s, 0s;
-  }
-  
-  .btn0 {
+}
+
+.btn0 {
     background: none;
     border: none;
     cursor: pointer;
@@ -178,21 +198,23 @@ label {
     font: 700 1.2rem "Roboto Slab", sans-serif;
     padding: 1em 2em;
     letter-spacing: 0.05rem;
-  }
-  .btn0:focus {
+}
+
+.btn0:focus {
     outline: 2px dotted #3a3f3f;
-  }
+}
+
 /* search button css end */
 
-  /* footer css start */
-  .row {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+/* footer css start */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 ul {
-	list-style: none;
+    list-style: none;
 }
 
 /* Bar display Cards */
@@ -213,7 +235,7 @@ ul {
     justify-content: center;
     font-size: 22px;
     text-decoration: none;
-    color:black
+    color: black
 }
 
 .barCard img {
@@ -227,78 +249,80 @@ ul {
     border-radius: 3px;
     padding: 0px 1px;
     position: absolute;
-    bottom: 2px; right: 2px;
+    bottom: 2px;
+    right: 2px;
 }
 
 /* Footer */
 
 .footer {
-	background-color: #656461;
-	padding: 50px 0;
-	width: 100%;
+    background-color: #656461;
+    padding: 50px 0;
+    width: 100%;
     margin-top: 250px
 }
 
 .footer-col {
-	width: auto;
-	padding: 0 100px;
-	display: block;
-	justify-content: center;
+    width: auto;
+    padding: 0 100px;
+    display: block;
+    justify-content: center;
 }
 
 /* Group Members */
 .footer-col h4 {
-	font-size: 18px;
-	color: #ffffff;
-	margin-bottom: 35px;
-	font-weight: 500;
-	position: relative;
-	font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
 
 }
+
 /* orange line underneathe names */
 .footer-col h4::before {
-	content: '';
-	position: absolute;
-	left: 0;
-	bottom: -10px;
-	background-color: #F0AB5D;
-	height: 2px;
-	width: 50px;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #F0AB5D;
+    height: 2px;
+    width: 50px;
 }
 
 .footer-col ul li:not(:last-child) {
-	margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .footer-col ul li a {
-	font-size: 16px;
-	color: #ffffff;
-	text-decoration: none;
-	font-weight: 300;
-	color: #bbbbbb;
-	position: relative;
-	transition: all 0.3s ease;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    position: relative;
+    transition: all 0.3s ease;
 }
 
 /* hover effect for links */
 .footer-col ul li a:hover {
-	color: #ffffff;
-	padding-left: 8px;
+    color: #ffffff;
+    padding-left: 8px;
 }
 
 /*responsive*/
 @media(max-width: 767px) {
-	.footer-col {
-		width: 50%;
-		margin-bottom: 30px;
-	}
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
 }
 
 @media(max-width: 574px) {
-	.footer-col {
-		width: 100%;
-	}
+    .footer-col {
+        width: 100%;
+    }
 }
 
 /* Drink Display Cards */
