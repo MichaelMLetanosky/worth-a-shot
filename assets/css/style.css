@@ -6,6 +6,30 @@
   }
 /* root variables for theme ^ */
 
+/* modal start */
+.modal-box {
+    position: relative;
+    float: left;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .noBtn {
+      margin-left: 20px;
+  }
+  
+
+/* saying that the page will be using flexbox */
+main {
+    display: flex;
+    padding: 40px;
+}
+
+main section {
+    width: 48%
+}
+
+
 /* header css start  */
 header{
     width: 100vw;
@@ -78,16 +102,6 @@ header nav .button:hover{
 }
 
 /* end header css */
-
-/* saying that the page will be using flexbox */
-main {
-    display: flex;
-    padding: 40px;
-}
-
-main section {
-    width: 48%
-}
 
 
 /* label for search buttons (search here for drink) */
