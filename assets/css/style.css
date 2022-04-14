@@ -293,8 +293,8 @@ li {
     height: auto;
     width: auto;
     max-width: 229px;
-    max-height: 229px;
-    margin-bottom: 3px;
+    max-height: 294px;
+    margin: 0 auto;
     background-color: var(--cardcolor);
     position: relative;
 }
@@ -314,6 +314,7 @@ li {
     max-width: 413px;
     max-height: 229px;
     margin-bottom: 3px;
+    margin: 0 auto;
 }
 
 .barCard button {
