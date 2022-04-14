@@ -182,26 +182,47 @@ ul {
 	list-style: none;
 }
 
+/* Drink Display Cards */
+
 .drinkCardCont {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .drinkCard {
     margin: 3px;
     width: 31%;
     background-color: var(--cardcolor);
+    text-align: center;
+}
+
+h2 {
+    margin-top: 5px;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+img {
+    height: auto;
+    width: auto;
+    max-width: 250px;
+    max-height: 250px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    /* background-size: cover; */
 }
 
 .barCardCont {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .barCard {
     margin: 3px;
     width: 48%;
     background-color: var(--cardcolor);
+    text-align: center;
 }
 
 .barCard a {
@@ -284,10 +305,4 @@ ul {
 	}
 }
 
-/* Drink Display Cards */
-img {
-    height: auto;
-    width: auto;
-    max-width: 200px;
-    max-height: 200px;
-}
+
