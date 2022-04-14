@@ -111,7 +111,11 @@ function showBars(x, y) {
                         //Sets name and URL in data of HTML to assist save functionality
                         let barObjSet = [{
                             Name: barName,
-                            url: barURL
+                            url: barURL,
+                            Photo: photoRef,
+                            Address: barAddress,
+                            Phone: barPhone,
+                            Rating: barRating
                         }];
                         barSave.dataset.barInfo = JSON.stringify(barObjSet);
                         document.querySelectorAll(".barCard")[i].appendChild(barSave);
