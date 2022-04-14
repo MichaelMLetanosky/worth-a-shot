@@ -187,6 +187,12 @@ ul {
     flex-wrap: wrap;
 }
 
+.drinkCard {
+    margin: 3px;
+    width: 31%;
+    background-color: var(--cardcolor);
+}
+
 .barCardCont {
     display: flex;
     flex-wrap: wrap;
