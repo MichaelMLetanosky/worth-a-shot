@@ -1,7 +1,9 @@
+/* gets image to fit page of browser */
 body, html {
     height: 100%;
   }
-  
+  /*end */
+
   /* background image for entire page */
   .bgimg {
     background-image: url("https://images.pexels.com/photos/2796105/pexels-photo-2796105.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
@@ -32,6 +34,7 @@ body nav .button:hover{
   color: #f0ab5d;
   font-size: medium;
 }
+/* end home page button */
 
 /* Title of the page "Favorites */
   .caption {
@@ -50,3 +53,4 @@ body nav .button:hover{
       font-size: 50px;
       letter-spacing: 3px;
   }
+/* end of title */
