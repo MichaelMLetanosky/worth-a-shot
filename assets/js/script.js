@@ -206,7 +206,7 @@ function displayDrinks(drinkData) {                                 // Passing d
     drinkSave.innerHTML = `➕`;
     //Sets name and URL in data of HTML to assist save functionality
     let drinkObjSet = [{
-        Photo: drinkImg,
+        Photo: drink.strDrinkThumb,
         Name: drinkName
     }];
     drinkSave.dataset.drinkInfo = JSON.stringify(drinkObjSet);
@@ -246,8 +246,16 @@ function displayDrinks(drinkData) {                                 // Passing d
         getIngred ();
 }
 
-function saveDrinks () {
-    console.log("save")
+function saveDrinks (event) {
+    let drinkObj = event.target.dataset.drinkInfo;
+    if (localStorage.getItem(`myDrinks`)){
+        let savedDrinks = JSON.parse(localStorage.getItem(`myDrinks`));
+        let newDrinks = JSON.parse(drinkObj);
+        updatedDrinks = savedDrinks.concat(newDrinks);
+        localStorage.setItem(`myDrinks`, JSON.stringify(updatedDrinks));
+    } else {
+        localStorage.setItem(`myDrinks`, drinkObj);
+    };
 }
   
 document.getElementById("locationSrch").addEventListener("click", findBars);
