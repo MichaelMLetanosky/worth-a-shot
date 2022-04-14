@@ -194,9 +194,15 @@ ul {
 }
 
 .barCard a {
-    font-size: 22px;  
+    justify-content: center;
+    font-size: 22px;
     text-decoration: none;
     color:black
+}
+
+.barCard img {
+    display: block;
+    margin: 4px auto;
 }
 
 .footer {
