@@ -105,10 +105,10 @@ header nav li {
     display: flex;
     height: 100%;
     float: left;
-    margin-right: 30px;
+    margin-right: 50px;
     justify-content: flex-end;
     align-items: flex-end;
-    font: "Roboto Slab";
+    font-family: "Roboto Slab";
 }
 
 header nav li:last-of-type {
