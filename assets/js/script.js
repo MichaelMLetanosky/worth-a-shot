@@ -107,7 +107,7 @@ function showBars(x, y) {
                         document.querySelectorAll(".barCard")[i].querySelector("a").setAttribute ("href", barURL);
                         //Add a save button to the card
                         let barSave = document.createElement("button");
-                        barSave.innerHTML = `Save`;
+                        barSave.innerHTML = `➕`;
                         //Sets name and URL in data of HTML to assist save functionality
                         let barObjSet = [{
                             Name: barName,

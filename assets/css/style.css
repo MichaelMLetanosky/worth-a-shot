@@ -317,14 +317,18 @@ li {
 }
 
 .barCard button {
+    margin:0px;
+    padding:0px 1px 1px 1px;
     display: block;
     border: 1px solid black;
-    border-radius: 3px;
-    padding: 0px 1px;
+    border-radius: 50%;
     position: absolute;
-    bottom: 2px;
+    background-color: var(--main-orange);
+    font-size: 18px;
+    top: 2px;
     right: 2px;
 }
+
 
 /* Footer */
 
