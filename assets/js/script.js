@@ -105,10 +105,19 @@ function showBars(x, y) {
                         //Set url to make the place name link to it on google maps
                         let barURL = data.result.url;
                         document.querySelectorAll(".barCard")[i].querySelector("a").setAttribute ("href", barURL);
+                        //Add a save button to the card
+                        let barSave = document.createElement("button");
+                        barSave.innerHTML = `Save`
+                        document.querySelectorAll(".barCard")[i].appendChild(barSave);
+                        barSave.addEventListener("click", saveBars);
             })
             };
         })
 };
+
+function saveBars() {
+    console.log("Saving Bar")
+}
 
 function findDrinks(event) {
     event.preventDefault();
