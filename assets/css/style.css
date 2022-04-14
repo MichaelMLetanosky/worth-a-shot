@@ -45,19 +45,21 @@ header {
 }
 
 header .inside {
-    width: 1300px;
+    width: 100%;
     height: 100%;
-    display: block;
+    display: flex;
+    justify-content: space-around;
     margin: 0 auto;
 }
 
 .logo {
+
     display: table;
     height: 100%;
     float: left;
     color: black;
     font-family: 'Luckiest Guy', cursive;
-    
+
 }
 
 header .logo div {
