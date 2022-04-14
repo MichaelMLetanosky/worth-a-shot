@@ -107,22 +107,22 @@ function showBars(x, y) {
                         document.querySelectorAll(".barCard")[i].querySelector("a").setAttribute ("href", barURL);
                         //Add a save button to the card
                         let barSave = document.createElement("button");
-                        barSave.innerHTML = `Save`
+                        barSave.innerHTML = `Save`;
                         let barObjSet = [{
                             Name: barName,
                             url: barURL
-                        }]
-                        barSave.dataset.barInfo = JSON.stringify(barObjSet)
+                        }];
+                        barSave.dataset.barInfo = JSON.stringify(barObjSet);
                         document.querySelectorAll(".barCard")[i].appendChild(barSave);
-                        barSave.addEventListener("click", saveBars(i));
+                        barSave.addEventListener("click", saveBars);
             })
             };
         })
 };
 
 function saveBars(event) {
-    console.log("Saving Bar")
-    let barObj = event.target.dataset.barInfo
+    let barObj = JSON.parse(event.target.dataset.barInfo)
+    console.log(barObj)
 
 }
 
