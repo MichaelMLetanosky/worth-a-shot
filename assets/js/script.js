@@ -108,15 +108,22 @@ function showBars(x, y) {
                         //Add a save button to the card
                         let barSave = document.createElement("button");
                         barSave.innerHTML = `Save`
+                        let barObjSet = [{
+                            Name: barName,
+                            url: barURL
+                        }]
+                        barSave.dataset.barInfo = JSON.stringify(barObjSet)
                         document.querySelectorAll(".barCard")[i].appendChild(barSave);
-                        barSave.addEventListener("click", saveBars);
+                        barSave.addEventListener("click", saveBars(i));
             })
             };
         })
 };
 
-function saveBars() {
+function saveBars(event) {
     console.log("Saving Bar")
+    let barObj = event.target.dataset.barInfo
+
 }
 
 function findDrinks(event) {
