@@ -6,8 +6,22 @@
   }
 /* root variables for theme */
 
+.modal-box {
+    position: relative;
+    float: left;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .noBtn {
+      margin-left: 20px;
+  }
+
+
+
+
 main {
-    display: flex;
+    display: flex;  
 }
 
 main section {
