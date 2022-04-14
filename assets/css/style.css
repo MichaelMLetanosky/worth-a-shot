@@ -4,8 +4,9 @@
     --font: "Roboto Slab";
     --cardcolor: #D5DBD7;
   }
-/* root variables for theme */
+/* root variables for theme ^ */
 
+/* modal start */
 .modal-box {
     position: relative;
     float: left;
@@ -16,59 +17,92 @@
   .noBtn {
       margin-left: 20px;
   }
+  
 
-
-
-
+/* saying that the page will be using flexbox */
 main {
-    display: flex;  
+    display: flex;
+    padding: 40px;
 }
 
 main section {
     width: 48%
 }
 
+
 /* header css start  */
-.container {
-    width: 100%;
-    height: 125px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-h1 {
+header{
+    width: 100vw;
+    height: 140px;
     font-family: 'Luckiest Guy', cursive;
-    text-indent: 400px;
-    display: inline-block;
-    text-align: bottom;
+    background-color: #f0ab5d;
 }
 
-header {
-    background-color: var(--main-orange);
+header .inside{
+    width: 1300px; 
+    height: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
-header a {
+header .logo{
+    display: table;
+    height: 100%;
+    float: left;
+}
+
+header .logo div{
+    height: 200%;
+    display: table-cell;
+    vertical-align: bottom;
+    font-size: xxx-large;
+    
+}
+/* this is for the favorites button */
+header nav{
     float: right;
-    padding: 0 25px 0 0;
-    font-family: 'Roboto Slab';  
-    text-decoration: none;
-    color:black
+    height: 100%;
+
 }
 
-header a:hover {
+header nav li{
+    display: flex;
+    height: 100%;
+    float: left;
+    margin-right: 30px;
+    align-items: flex-end;
+    justify-content: center;
+
+}
+
+header nav li:last-of-type{
+    margin-right: 0;
+}
+
+header nav span {
+    display: table-cell;
+    vertical-align: text-bottom;
+}
+
+header nav a{
+    color: #101010;
+}
+
+header nav .button{
+    background-color: #f0ab5d; 
+    color: #101010;
+    
+}
+
+header nav .button:hover{
     transition: all .2s ease-in-out;
     transform: scale(1.1);
-    font-family: 'Roboto Slab';
-    color: #55534d;
+    color: #101010;
     font-size: large;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
+
 /* end header css */
+
 
 /* label for search buttons (search here for drink) */
 label {
@@ -173,9 +207,15 @@ ul {
 }
 
 .barCard a {
-    font-size: 22px;  
+    justify-content: center;
+    font-size: 22px;
     text-decoration: none;
     color:black
+}
+
+.barCard img {
+    display: block;
+    margin: 4px auto;
 }
 
 .footer {
@@ -244,4 +284,12 @@ ul {
 	.footer-col {
 		width: 100%;
 	}
+}
+
+/* Drink Display Cards */
+img {
+    height: auto;
+    width: auto;
+    max-width: 200px;
+    max-height: 200px;
 }

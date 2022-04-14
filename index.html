@@ -8,7 +8,9 @@
   <!-- Third Party Links -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
   <!-- Custom Links -->
   <link rel="stylesheet" href="./assets/css/reset.css" />
   <link href="https://cdn.jsdelivr.net/npm/daisyui@2.13.6/dist/full.css" rel="stylesheet" type="text/css" />
@@ -25,14 +27,17 @@
   <div class="parent">
     <!-- Header -->
     <header>
-      <div class="container">
-        <h1>Worth a Shot<img src="./assets/images/shot (1).png" alt="shot-icon"></h1> 
-        <nav> 
-          <a href="favorites.html">Favorites</a>
-        </nav>
-      </div>  
-    </header>
-
+      <div class="inside">
+          <div class="logo">
+              <div>
+                <h1>Worth a Shot<img src="./assets/images/shot (1).png" alt="shot-icon"></h1> 
+              </div>
+          </div>
+          <nav>
+              <li><span><a href="favorites.html" class="button">Favorites</a></span></li>
+          </nav>
+      </div>
+  </header>
     <!-- Main Area -->
     <main>
       <!-- Drink Search -->
@@ -42,7 +47,8 @@
           <input type="text" class="searchField" id="ingredient" name="ingredient" placeholder="Vodka">
           <button class="btn0 search-border" id="ingredientSrch">Search for my drink!</button>
         </form>
-        <div id="drinkDisplay"> </div>
+        <!-- Drink Display  -->
+        <div class="drinkCardCont"></div>
       </section>
       <!-- Bar Search -->
       <section>
@@ -54,7 +60,7 @@
         <div class="barCardCont"> </div>
       </section>
     </main>
-    
+
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
@@ -63,28 +69,28 @@
             <h4>Hailey Bates</h4>
             <ul>
               <li><a href="https://github.com/haileyrb25">GitHub</a></li>
-              <li><a href="#">LinkdIn</a></li>
+              <li><a href="https://www.linkedin.com/in/hailey-bates-283b06183/">LinkedIn</a></li>
             </ul>
           </div>
           <div class="footer-col">
             <h4>Michael Letanosky</h4>
             <ul>
               <li><a href="https://github.com/MichaelMLetanosky">GitHub</a></li>
-              <li><a href="#">LinkdIn</a></li>
+              <li><a href="#">LinkedIn</a></li>
             </ul>
           </div>
           <div class="footer-col">
             <h4>Michael Sands</h4>
             <ul>
               <li><a href="https://github.com/Msands21">GitHub</a></li>
-              <li><a href="#">LinkdIn</a></li>
+              <li><a href="#">LinkedIn</a></li>
             </ul>
           </div>
           <div class="footer-col">
             <h4>Ricky Thakar</h4>
          <ul>
            <li><a href="https://github.com/Rickythakar">GitHub</a></li>
-           <li><a href="#">LinkdIn</a></li>
+           <li><a href="#">LinkedIn</a></li>
          </ul>
             </div>
           </div>

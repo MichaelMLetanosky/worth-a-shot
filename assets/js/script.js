@@ -29,8 +29,6 @@ function findBars(event) {
             //Gets latitude and logitude from the data and passes to the shows Bars function
             let locationLat = data.results[0].geometry.location.lat;
             let locationLng = data.results[0].geometry.location.lng;
-            console.log (locationLat);
-            console.log (locationLng);
             showBars (locationLat, locationLng);
         })   
 };
@@ -64,6 +62,11 @@ function showBars(x, y) {
                 barCard.classList.add("barCard");
                 document.querySelector(".barCardCont").appendChild(barCard);
                 
+                //Set bar photo
+                let photoRef = data.results[i].photos[0].photo_reference
+                let barPicCont = document.createElement("img");
+                barPicCont.src = `https://maps.googleapis.com/maps/api/place/photo?maxheight=150&maxwidth=300&photo_reference=${photoRef}&key=${googleApiKey}`;
+                document.querySelectorAll(".barCard")[i].appendChild(barPicCont);
                 //Set the name
                 let barName = data.results[i].name;
                 let barNameCont = document.createElement("a");
@@ -82,7 +85,7 @@ function showBars(x, y) {
                         if (!response.ok) {
                             return;
                         };
-        
+
                         return response.json();
                     })
                     .then(data => {
@@ -102,7 +105,7 @@ function showBars(x, y) {
                         //Set url to make the place name link to it on google maps
                         let barURL = data.result.url;
                         document.querySelectorAll(".barCard")[i].querySelector("a").setAttribute ("href", barURL);
-                    })
+            })
             };
         })
 };
@@ -129,7 +132,7 @@ function findDrinks(event) {
         
         
         // Inhibits the same drink showing up multiple times
-        document.querySelector("#drinkDisplay").innerHTML = ""
+        document.querySelector(".drinkCardCont").innerHTML = ""
         // Pagination idea for multiple page selection if we have time
         // 20 / 6 = 3
         // 20 % 6 = 2
@@ -149,9 +152,12 @@ function findDrinks(event) {
 // Appends all selected data to the page 
 function displayDrinks(data) {                                 // Passing data from get drinks function to displayDrinks function
     const drink = data; 
-    const drinkDiv = document.querySelector('#drinkDisplay');  // Hooking into drinkDisplay container
+    let drinkDiv = document.createElement("div");
+    drinkDiv.classList.add("drinkCard");
+    document.querySelector(".drinkCardCont").appendChild(drinkDiv);
+    // const drinkDiv = document.querySelector('.drinkCard');  // Hooking into drinkDisplay container
     const drinkName = drink.strDrink;                          // Grabbing the drink name property from object
-    const heading = document.createElement("h1");              // Creating an element to display drink name
+    const heading = document.createElement("h2");              // Creating an element to display drink name
     heading.innerHTML = drinkName;                             // Stating the drink name will be in the heading 
     drinkDiv.appendChild(heading);                             // Adding the text onto the page
 
