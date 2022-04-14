@@ -67,8 +67,6 @@ function showBars(x, y) {
                 let barPicCont = document.createElement("img");
                 barPicCont.src = `https://maps.googleapis.com/maps/api/place/photo?maxheight=500&maxwidth=500&photo_reference=${photoRef}&key=${googleApiKey}`;
                 document.querySelectorAll(".barCard")[i].appendChild(barPicCont);
-                let lineBreak = document.createElement("br");
-                document.querySelectorAll(".barCard")[i].appendChild(lineBreak);
                 //Set the name
                 let barName = data.results[i].name;
                 let barNameCont = document.createElement("a");
