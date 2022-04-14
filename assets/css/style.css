@@ -294,8 +294,8 @@ li {
     height: auto;
     width: auto;
     max-width: 229px;
-    max-height: 229px;
-    margin-bottom: 3px;
+    max-height: 290px;
+    margin: 0 auto;
     background-color: var(--cardcolor);
     position: relative;
 }
@@ -315,6 +315,7 @@ li {
     max-width: 413px;
     max-height: 229px;
     margin-bottom: 3px;
+    margin: 0 auto;
 }
 
 .barCard button, .drinkCard button {
@@ -395,11 +396,28 @@ li {
         width: 50%;
         margin-bottom: 30px;
     }
+    .drinkCard,
+    .barCard {
+        width: 47%;
+    }
+    main {
+        flex-direction: column;
+    }
+    main section {
+        width: 96%
+    }
 }
 
 @media(max-width: 574px) {
     .footer-col {
         width: 100%;
+    }
+    .drinkCard,
+    .barCard{
+        width: 97%;
+    }
+    main {
+        flex-direction: column;
     }
 }
 
