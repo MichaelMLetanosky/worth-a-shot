@@ -207,7 +207,8 @@ li {
     overflow: hidden;
 }
 
-.drinkCard:hover {
+.drinkCard:hover,
+.barCard:hover {
     background-color: var(--main-orange);
     /* color: white; */
     transform: scale(1.03);
@@ -217,6 +218,7 @@ li {
 h2 {
     margin-top: 5px;
     font-family: 'Luckiest Guy', cursive;
+    font-size: 20px;
 }
 
 img {
@@ -260,7 +262,7 @@ img {
     height: auto;
     width: auto;
     max-width: 413px;
-    max-height: 231px;
+    max-height: 229px;
     margin-bottom: 3px;
 }
 
