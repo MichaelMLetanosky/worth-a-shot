@@ -13,12 +13,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
   <!-- Custom Links -->
   <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.13.6/dist/full.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
   <link rel="icon" href="./assets/images/worth-a-shot-icon.png">
   <link rel="stylesheet" href="./assets/css/style.css" />
   <title>Worth a Shot</title>
+
 </head>
 
 <body>
+<!-- Age Verify Modal-->
+<input type="checkbox" id="my-modal" class="modal-toggle">
+<div id="modal" class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+
+  <div class="modal-box">
+    <h3 class="font-bold text-lg">Please verify</h3>
+    <p class="py-4">Are you over 21?</p>
+    <div class="modal-action">
+      <button for="my-modal" class="yesBtn">Yay!</buttton>
+      <a href="https://giphy.com/explore/cat" for="my-modal" class="noBtn">Nay!</button>
+    </div>
+  </div>
+</div>
+
   <div class="parent">
     <!-- Header -->
     <header>
@@ -93,6 +110,7 @@
       </div>
    </footer>
   <!--Add jQuery here if neccessary-->
+<script src="./assets/js/age-checker.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
 
