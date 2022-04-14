@@ -230,25 +230,6 @@ img {
     /* background-size: cover; */
 }
 
-/* .barCardCont {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-} */
-
-/* .barCard { */
-    /* margin: 3px;
-    width: 31%;
-    background-color: var(--cardcolor);
-    text-align: center; */
-    /* margin: 3px;
-    width: 27%;
-    background-color: var(--cardcolor);
-    text-align: center;
-    border-radius: 15px;
-    overflow: hidden;
-} */
-
 .barCard a {
     font-family: 'Luckiest Guy', cursive;
     justify-content: center;

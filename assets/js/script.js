@@ -67,6 +67,8 @@ function showBars(x, y) {
                 let barPicCont = document.createElement("img");
                 barPicCont.src = `https://maps.googleapis.com/maps/api/place/photo?maxheight=500&maxwidth=500&photo_reference=${photoRef}&key=${googleApiKey}`;
                 document.querySelectorAll(".barCard")[i].appendChild(barPicCont);
+                let lineBreak = document.createElement("br");
+                document.querySelectorAll(".barCard")[i].appendChild(lineBreak);
                 //Set the name
                 let barName = data.results[i].name;
                 let barNameCont = document.createElement("a");
@@ -124,7 +126,7 @@ function findDrinks(event) {
 
 
         // API call to receive drink data by name ie. margaraita, rum, gin etc. 
-        const api_url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${ingredientName}`
+        const api_url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredientName}`
         async function getDrinks() {
         const response = await fetch(api_url);
         const data = await response.json();
@@ -139,6 +141,9 @@ function findDrinks(event) {
         // Grabs six random drinks from drinks array to then be ready to display
         var drinksArr = data.drinks
         for(i=0; i<6; i++) {
+            if (drinksArr < 6) {
+                return [i]
+            }  
             var randomIndex = Math.floor(Math.random() * data.drinks.length)
             displayDrinks(drinksArr[randomIndex]);
             drinksArr.splice(randomIndex, 1)
@@ -149,9 +154,11 @@ function findDrinks(event) {
 
 };
 
+
+
 // Appends all selected data to the page 
-function displayDrinks(data) {                                 // Passing data from get drinks function to displayDrinks function
-    const drink = data; 
+function displayDrinks(drinkData) {                                 // Passing data from get drinks function to displayDrinks function
+    let drink = drinkData; 
     let drinkDiv = document.createElement("div");
     drinkDiv.classList.add("drinkCard");
     document.querySelector(".drinkCardCont").appendChild(drinkDiv);
@@ -159,36 +166,45 @@ function displayDrinks(data) {                                 // Passing data f
     
     const drinkImg = document.createElement("img");            // Creating an element to add the drink image
     drinkImg.src = drink.strDrinkThumb;                        // Hooking into the data to grab the drinkImage property
-    drinkDiv.appendChild(drinkImg);                            // Adding the image to the page
+    drinkDiv.appendChild(drinkImg);  
 
     const drinkName = drink.strDrink;                          // Grabbing the drink name property from object
     const heading = document.createElement("h2");              // Creating an element to display drink name
     heading.innerHTML = drinkName;                             // Stating the drink name will be in the heading 
-    drinkDiv.appendChild(heading);                             // Adding the text onto the page
+    drinkDiv.appendChild(heading); 
 
+    // Gets ingredient api
+    const ingredientAPI = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkName}`
+    async function getIngred() {
+        const response = await fetch (ingredientAPI);
+        const data = await response.json();
+        const cocktail = data.drinks[0];
+        
+        // Adds ul element
+        const cocktailIngredients = document.createElement ("ul");
+        
+        drinkDiv.appendChild(cocktailIngredients);
+// pulls ingredients from created object and displays to cards
+        const getIngredients = Object.keys(cocktail)
+            .filter(function (ingredient) {
+            return ingredient.indexOf("strIngredient") == 0;
+            })
+            .reduce(function (ingredients, ingredient) {
+            if (cocktail[ingredient] != null) {
+                ingredients[ingredient] = cocktail[ingredient];
+            }
+            return ingredients;
+            }, {});
 
-    const drinkIngredients = document.createElement("ul");     // creates an unordered list element to add drink ingredients
-    drinkDiv.appendChild(drinkIngredients);
-
-    // Ingredients aren't stored in an array in the API SO we must  create an object and only add ingredients that don't have a null value 
-    const getIngredients = Object.keys(drink)
-    .filter(function(ingredient){
-        return ingredient.indexOf("strIngredient") == 0;
-    })
-    .reduce(function(ingredients, ingredient){
-        if (drink[ingredient] != null ){
-            ingredients[ingredient] = drink[ingredient];
+        for (let key in getIngredients) {
+            let value = getIngredients[key];
+            listItem = document.createElement("li");
+            listItem.innerHTML = value;
+            cocktailIngredients.appendChild(listItem);
         }
-        return ingredients;
-    }, {});
-
-    for (let key in getIngredients) {
-        let value = getIngredients[key];
-        listItem = document.createElement("li");
-        listItem.innerHTML = value;
-        drinkIngredients.appendChild(listItem);
-    }
-}
-
+    } 
+        getIngred ();
+    }         
+  
 document.getElementById("locationSrch").addEventListener("click", findBars);
 document.getElementById("ingredientSrch").addEventListener("click", findDrinks);
