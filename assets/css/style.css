@@ -391,11 +391,28 @@ li {
         width: 50%;
         margin-bottom: 30px;
     }
+    .drinkCard,
+    .barCard {
+        width: 47%;
+    }
+    main {
+        flex-direction: column;
+    }
+    main section {
+        width: 96%
+    }
 }
 
 @media(max-width: 574px) {
     .footer-col {
         width: 100%;
+    }
+    .drinkCard,
+    .barCard{
+        width: 97%;
+    }
+    main {
+        flex-direction: column;
     }
 }
 
