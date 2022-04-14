@@ -156,14 +156,16 @@ function displayDrinks(data) {                                 // Passing data f
     drinkDiv.classList.add("drinkCard");
     document.querySelector(".drinkCardCont").appendChild(drinkDiv);
     // const drinkDiv = document.querySelector('.drinkCard');  // Hooking into drinkDisplay container
+    
+    const drinkImg = document.createElement("img");            // Creating an element to add the drink image
+    drinkImg.src = drink.strDrinkThumb;                        // Hooking into the data to grab the drinkImage property
+    drinkDiv.appendChild(drinkImg);                            // Adding the image to the page
+
     const drinkName = drink.strDrink;                          // Grabbing the drink name property from object
     const heading = document.createElement("h2");              // Creating an element to display drink name
     heading.innerHTML = drinkName;                             // Stating the drink name will be in the heading 
     drinkDiv.appendChild(heading);                             // Adding the text onto the page
 
-    const drinkImg = document.createElement("img");            // Creating an element to add the drink image
-    drinkImg.src = drink.strDrinkThumb;                        // Hooking into the data to grab the drinkImage property
-    drinkDiv.appendChild(drinkImg);                            // Adding the image to the page
 
     const drinkIngredients = document.createElement("ul");     // creates an unordered list element to add drink ingredients
     drinkDiv.appendChild(drinkIngredients);

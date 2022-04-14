@@ -180,6 +180,12 @@ label {
 
 ul {
 	list-style: none;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+li {
+    font-size: medium;
 }
 
 /* Drink Display Cards */
@@ -192,9 +198,18 @@ ul {
 
 .drinkCard {
     margin: 3px;
-    width: 31%;
+    width: 27%;
     background-color: var(--cardcolor);
     text-align: center;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.drinkCard:hover {
+    background-color: var(--main-orange);
+    color: white;
+    transform: scale(1.03);
+    transition: all 1s ease;
 }
 
 h2 {
@@ -205,10 +220,9 @@ h2 {
 img {
     height: auto;
     width: auto;
-    max-width: 250px;
-    max-height: 250px;
-    margin-bottom: 5px;
-    margin-top: 5px;
+    max-width: 229px;
+    max-height: 229px;
+    margin-bottom: 3px;
     /* background-size: cover; */
 }
 
@@ -220,7 +234,7 @@ img {
 
 .barCard {
     margin: 3px;
-    width: 48%;
+    width: 31%;
     background-color: var(--cardcolor);
     text-align: center;
 }
