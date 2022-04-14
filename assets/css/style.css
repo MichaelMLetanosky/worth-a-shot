@@ -4,7 +4,7 @@
     --font: "Roboto Slab";
     --cardcolor: #D5DBD7;
   }
-/* root variables for theme */
+/* root variables for theme ^ */
 
 /* header css start  */
 header{
@@ -34,7 +34,7 @@ header .logo div{
     font-size: xxx-large;
     
 }
-
+/* this is for the favorites button */
 header nav{
     float: right;
     height: 100%;
@@ -79,7 +79,7 @@ header nav .button:hover{
 
 /* end header css */
 
-
+/* saying that the page will be using flexbox */
 main {
     display: flex;
     padding: 40px;
@@ -88,7 +88,6 @@ main {
 main section {
     width: 48%
 }
-
 
 
 /* label for search buttons (search here for drink) */
