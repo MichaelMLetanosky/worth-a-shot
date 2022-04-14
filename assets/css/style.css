@@ -190,13 +190,15 @@ li {
 
 /* Drink Display Cards */
 
-.drinkCardCont {
+.drinkCardCont,
+.barCardCont {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.drinkCard {
+.drinkCard,
+.barCard {
     margin: 3px;
     width: 27%;
     background-color: var(--cardcolor);
@@ -207,7 +209,7 @@ li {
 
 .drinkCard:hover {
     background-color: var(--main-orange);
-    color: white;
+    /* color: white; */
     transform: scale(1.03);
     transition: all 1s ease;
 }
@@ -226,18 +228,24 @@ img {
     /* background-size: cover; */
 }
 
-.barCardCont {
+/* .barCardCont {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
+} */
 
-.barCard {
-    margin: 3px;
+/* .barCard { */
+    /* margin: 3px;
     width: 31%;
     background-color: var(--cardcolor);
+    text-align: center; */
+    /* margin: 3px;
+    width: 27%;
+    background-color: var(--cardcolor);
     text-align: center;
-}
+    border-radius: 15px;
+    overflow: hidden;
+} */
 
 .barCard a {
     justify-content: center;
@@ -247,8 +255,13 @@ img {
 }
 
 .barCard img {
-    display: block;
-    margin: 4px auto;
+    /* display: block;
+    margin: 4px auto; */
+    height: auto;
+    width: auto;
+    max-width: 229px;
+    max-height: 229px;
+    margin-bottom: 3px;
 }
 
 .footer {
