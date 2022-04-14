@@ -182,6 +182,11 @@ ul {
 	list-style: none;
 }
 
+.drinkCardCont {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .barCardCont {
     display: flex;
     flex-wrap: wrap;
