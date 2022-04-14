@@ -37,10 +37,10 @@ main section {
 
 
 /* header css start  */
+
 header {
     width: 100vw;
     height: 140px;
-    font-family: 'Luckiest Guy', cursive;
     background-color: #f0ab5d;
 }
 
@@ -56,6 +56,8 @@ header .inside {
     height: 100%;
     float: left;
     color: black;
+    font-family: 'Luckiest Guy', cursive;
+    
 }
 
 header .logo div {
@@ -67,6 +69,8 @@ header .logo div {
 }
 
 /* this is for the favorites button */
+
+
 header nav {
     float: right;
     height: 100%;
@@ -262,6 +266,7 @@ ul {
     background-color: #656461;
     padding: 50px 0;
     width: 100%;
+    margin-top: 360px;
 }
 
 .footer-col {
