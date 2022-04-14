@@ -59,15 +59,33 @@ header .inside {
     float: left;
     color: black;
     font-family: 'Luckiest Guy', cursive;
+    display: flex;
+    justify-content: space-between;
 
 }
 
-header .logo div {
+/* header .logo div {
     height: 200%;
     display: table-cell;
     vertical-align: bottom;
-    font-size: xxx-large;
+    font-size: xxx-large; */
 
+header .logo div {
+    display: table-cell;
+    vertical-align: bottom;
+    font-size: xxx-large;
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 75px;
+}
+
+
+.shotglass {
+    height: auto;
+    width: auto;
+    max-width: 50px;
+    max-height: 50px;
 }
 
 /* this is for the favorites button */
