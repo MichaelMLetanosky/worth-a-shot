@@ -248,10 +248,12 @@ img {
 } */
 
 .barCard a {
+    font-family: 'Luckiest Guy', cursive;
     justify-content: center;
-    font-size: 22px;
+    font-size: 20px;
     text-decoration: none;
-    color:black
+    color:black;
+    margin-top: 5px;
 }
 
 .barCard img {
@@ -260,6 +262,13 @@ img {
     max-width: 413px;
     max-height: 231px;
     margin-bottom: 3px;
+}
+
+p { 
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
 }
 
 .footer {
