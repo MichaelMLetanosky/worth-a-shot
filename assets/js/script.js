@@ -107,7 +107,7 @@ function showBars(x, y) {
                         document.querySelectorAll(".barCard")[i].querySelector("a").setAttribute ("href", barURL);
                         //Add a save button to the card
                         let barSave = document.createElement("button");
-                        barSave.innerHTML = `Save`;
+                        barSave.innerHTML = `➕`;
                         //Sets name and URL in data of HTML to assist save functionality
                         let barObjSet = [{
                             Name: barName,
@@ -125,6 +125,8 @@ function showBars(x, y) {
         })
 };
 
+
+//Saves the bar to local Storage
 function saveBars(event) {
     let barObj = event.target.dataset.barInfo;
     if (localStorage.getItem(`myBars`)){
@@ -137,6 +139,7 @@ function saveBars(event) {
     };
 };
 
+//Function for searching for drinks based of any ingredient
 function findDrinks(event) {
     event.preventDefault();
     console.log("clicked ingredient search");
@@ -196,7 +199,19 @@ function displayDrinks(drinkData) {                                 // Passing d
     const drinkName = drink.strDrink;                          // Grabbing the drink name property from object
     const heading = document.createElement("h2");              // Creating an element to display drink name
     heading.innerHTML = drinkName;                             // Stating the drink name will be in the heading 
-    drinkDiv.appendChild(heading); 
+    drinkDiv.appendChild(heading);
+
+    //Add a save button to the card
+    let drinkSave = document.createElement("button");
+    drinkSave.innerHTML = `➕`;
+    //Sets name and URL in data of HTML to assist save functionality
+    let drinkObjSet = [{
+        Photo: drink.strDrinkThumb,
+        Name: drinkName
+    }];
+    drinkSave.dataset.drinkInfo = JSON.stringify(drinkObjSet);
+    drinkDiv.appendChild(drinkSave);
+    drinkSave.addEventListener("click", saveDrinks);
 
     // Gets ingredient api
     const ingredientAPI = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkName}`
@@ -229,7 +244,19 @@ function displayDrinks(drinkData) {                                 // Passing d
         }
     } 
         getIngred ();
-    }         
+}
+
+function saveDrinks (event) {
+    let drinkObj = event.target.dataset.drinkInfo;
+    if (localStorage.getItem(`myDrinks`)){
+        let savedDrinks = JSON.parse(localStorage.getItem(`myDrinks`));
+        let newDrinks = JSON.parse(drinkObj);
+        updatedDrinks = savedDrinks.concat(newDrinks);
+        localStorage.setItem(`myDrinks`, JSON.stringify(updatedDrinks));
+    } else {
+        localStorage.setItem(`myDrinks`, drinkObj);
+    };
+}
   
 document.getElementById("locationSrch").addEventListener("click", findBars);
 document.getElementById("ingredientSrch").addEventListener("click", findDrinks);
