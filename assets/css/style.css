@@ -278,29 +278,25 @@ li {
 .drinkCard:hover,
 .barCard:hover {
     background-color: var(--main-orange);
-    /* color: white; */
     transform: scale(1.03);
     transition: all 1s ease;
 }
 
-h2 {
+.drinkCard h2 {
+    color: black;
     margin-top: 5px;
     font-family: 'Luckiest Guy', cursive;
     font-size: 20px;
 }
 
-img {
+.drinkCard img {
     height: auto;
     width: auto;
     max-width: 229px;
     max-height: 229px;
     margin-bottom: 3px;
-    /* background-size: cover; */
-    margin: 3px 3px 0px 3px;
-    width: 48%;
     background-color: var(--cardcolor);
     position: relative;
-
 }
 
 .barCard a {
@@ -318,13 +314,6 @@ img {
     max-width: 413px;
     max-height: 229px;
     margin-bottom: 3px;
-}
-
-p { 
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 3px;
-    padding-right: 3px;
 }
 
 .barCard button {
