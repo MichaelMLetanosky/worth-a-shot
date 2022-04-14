@@ -245,33 +245,86 @@ label {
 }
 
 ul {
-    list-style: none;
+	list-style: none;
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
 
-/* Bar display Cards */
+
+li {
+    font-size: medium;
+}
+
+/* Drink Display Cards */
+
+.drinkCardCont,
 
 .barCardCont {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
+.drinkCard,
 .barCard {
+    margin: 3px;
+    width: 27%;
+    background-color: var(--cardcolor);
+    text-align: center;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.drinkCard:hover,
+.barCard:hover {
+    background-color: var(--main-orange);
+    /* color: white; */
+    transform: scale(1.03);
+    transition: all 1s ease;
+}
+
+h2 {
+    margin-top: 5px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 20px;
+}
+
+img {
+    height: auto;
+    width: auto;
+    max-width: 229px;
+    max-height: 229px;
+    margin-bottom: 3px;
+    /* background-size: cover; */
     margin: 3px 3px 0px 3px;
     width: 48%;
     background-color: var(--cardcolor);
     position: relative;
+
 }
 
 .barCard a {
+    font-family: 'Luckiest Guy', cursive;
     justify-content: center;
-    font-size: 22px;
+    font-size: 20px;
     text-decoration: none;
-    color: black
+    color:black;
+    margin-top: 5px;
 }
 
 .barCard img {
-    display: block;
-    margin: 4px auto;
+    height: auto;
+    width: auto;
+    max-width: 413px;
+    max-height: 229px;
+    margin-bottom: 3px;
+}
+
+p { 
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
 }
 
 .barCard button {
@@ -356,10 +409,4 @@ ul {
     }
 }
 
-/* Drink Display Cards */
-img {
-    height: auto;
-    width: auto;
-    max-width: 200px;
-    max-height: 200px;
-}
+
