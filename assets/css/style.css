@@ -49,7 +49,11 @@ header .inside {
     height: 100%;
     display: flex;
     justify-content: space-around;
-    margin: 0 auto;
+    margin-left: 50px;
+}
+
+.titleLogo {
+    margin-left: 50px;
 }
 
 .logo {
@@ -102,9 +106,9 @@ header nav li {
     height: 100%;
     float: left;
     margin-right: 30px;
+    justify-content: flex-end;
     align-items: flex-end;
-    justify-content: center;
-
+    font: "Roboto Slab";
 }
 
 header nav li:last-of-type {
