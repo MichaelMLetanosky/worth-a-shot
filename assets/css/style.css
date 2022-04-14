@@ -4,7 +4,31 @@
     --font: "Roboto Slab";
     --cardcolor: #D5DBD7;
   }
-/* root variables for theme */
+/* root variables for theme ^ */
+
+/* modal start */
+.modal-box {
+    position: relative;
+    float: left;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .noBtn {
+      margin-left: 20px;
+  }
+  
+
+/* saying that the page will be using flexbox */
+main {
+    display: flex;
+    padding: 40px;
+}
+
+main section {
+    width: 48%
+}
+
 
 /* header css start  */
 header{
@@ -34,7 +58,7 @@ header .logo div{
     font-size: xxx-large;
     
 }
-
+/* this is for the favorites button */
 header nav{
     float: right;
     height: 100%;
@@ -78,17 +102,6 @@ header nav .button:hover{
 }
 
 /* end header css */
-
-
-main {
-    display: flex;
-    padding: 40px;
-}
-
-main section {
-    width: 48%
-}
-
 
 
 /* label for search buttons (search here for drink) */
@@ -184,6 +197,7 @@ ul {
     padding-top: 5px;
 }
 
+
 li {
     font-size: medium;
 }
@@ -191,6 +205,7 @@ li {
 /* Drink Display Cards */
 
 .drinkCardCont,
+
 .barCardCont {
     display: flex;
     flex-wrap: wrap;
@@ -228,6 +243,11 @@ img {
     max-height: 229px;
     margin-bottom: 3px;
     /* background-size: cover; */
+    margin: 3px 3px 0px 3px;
+    width: 48%;
+    background-color: var(--cardcolor);
+    position: relative;
+
 }
 
 .barCard a {
@@ -254,10 +274,22 @@ p {
     padding-right: 3px;
 }
 
+.barCard button {
+    display: block;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 0px 1px;
+    position: absolute;
+    bottom: 2px; right: 2px;
+}
+
+/* Footer */
+
 .footer {
 	background-color: #656461;
 	padding: 50px 0;
 	width: 100%;
+    margin-top: 250px
 }
 
 .footer-col {

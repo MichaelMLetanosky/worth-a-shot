@@ -1,7 +1,10 @@
+/* gets image to fit page of browser */
 body, html {
     height: 100%;
   }
-  
+  /*end */
+
+  /* background image for entire page */
   .bgimg {
     background-image: url("https://images.pexels.com/photos/2796105/pexels-photo-2796105.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
     opacity: .9;
@@ -11,6 +14,29 @@ body, html {
     background-size: cover;
   }
 
+ /* back to home page button */
+body nav a {
+  color: white;
+}
+
+body nav .button {
+  color: white;
+  float: right;
+  padding: 20px;
+  font: "Roboto Slab";
+  font-size: smaller;
+
+}
+
+body nav .button:hover{
+  transition: all .2s ease-in-out;
+  transform: scale(1.1);
+  color: #f0ab5d;
+  font-size: medium;
+}
+/* end home page button */
+
+/* Title of the page "Favorites */
   .caption {
       position: absolute;
       left: 0;
@@ -27,3 +53,4 @@ body, html {
       font-size: 50px;
       letter-spacing: 3px;
   }
+/* end of title */

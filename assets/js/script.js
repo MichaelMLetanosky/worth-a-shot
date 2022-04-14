@@ -107,9 +107,36 @@ function showBars(x, y) {
                         //Set url to make the place name link to it on google maps
                         let barURL = data.result.url;
                         document.querySelectorAll(".barCard")[i].querySelector("a").setAttribute ("href", barURL);
+                        //Add a save button to the card
+                        let barSave = document.createElement("button");
+                        barSave.innerHTML = `Save`;
+                        //Sets name and URL in data of HTML to assist save functionality
+                        let barObjSet = [{
+                            Name: barName,
+                            url: barURL,
+                            Photo: photoRef,
+                            Address: barAddress,
+                            Phone: barPhone,
+                            Rating: barRating
+                        }];
+                        barSave.dataset.barInfo = JSON.stringify(barObjSet);
+                        document.querySelectorAll(".barCard")[i].appendChild(barSave);
+                        barSave.addEventListener("click", saveBars);
             })
             };
         })
+};
+
+function saveBars(event) {
+    let barObj = event.target.dataset.barInfo;
+    if (localStorage.getItem(`myBars`)){
+        let savedBars = JSON.parse(localStorage.getItem(`myBars`));
+        let newBar = JSON.parse(barObj);
+        updatedBars = savedBars.concat(newBar);
+        localStorage.setItem(`myBars`, JSON.stringify(updatedBars));
+    } else {
+        localStorage.setItem(`myBars`, barObj);
+    };
 };
 
 function findDrinks(event) {
