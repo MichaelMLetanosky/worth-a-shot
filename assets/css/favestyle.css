@@ -21,6 +21,8 @@ body nav .button {
   color: white;
   float: right;
   padding: 20px;
+  font: "Roboto Slab";
+  font-size: smaller;
 
 }
 
@@ -28,7 +30,7 @@ body nav .button:hover{
   transition: all .2s ease-in-out;
   transform: scale(1.1);
   color: #f0ab5d;
-  font-size: large;
+  font-size: medium;
 }
 
 /* Title of the page "Favorites */
