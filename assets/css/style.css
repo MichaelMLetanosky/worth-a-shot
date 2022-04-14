@@ -273,6 +273,7 @@ li {
     text-align: center;
     border-radius: 15px;
     overflow: hidden;
+    position: relative;
 }
 
 .drinkCard:hover,
