@@ -125,6 +125,8 @@ function showBars(x, y) {
         })
 };
 
+
+//Saves the bar to local Storage
 function saveBars(event) {
     let barObj = event.target.dataset.barInfo;
     if (localStorage.getItem(`myBars`)){
@@ -137,6 +139,7 @@ function saveBars(event) {
     };
 };
 
+//Function for searching for drinks based of any ingredient
 function findDrinks(event) {
     event.preventDefault();
     console.log("clicked ingredient search");
@@ -196,7 +199,19 @@ function displayDrinks(drinkData) {                                 // Passing d
     const drinkName = drink.strDrink;                          // Grabbing the drink name property from object
     const heading = document.createElement("h2");              // Creating an element to display drink name
     heading.innerHTML = drinkName;                             // Stating the drink name will be in the heading 
-    drinkDiv.appendChild(heading); 
+    drinkDiv.appendChild(heading);
+
+    //Add a save button to the card
+    let drinkSave = document.createElement("button");
+    drinkSave.innerHTML = `➕`;
+    //Sets name and URL in data of HTML to assist save functionality
+    let drinkObjSet = [{
+        Photo: drinkImg,
+        Name: drinkName
+    }];
+    drinkSave.dataset.drinkInfo = JSON.stringify(drinkObjSet);
+    drinkDiv.appendChild(drinkSave);
+    drinkSave.addEventListener("click", saveDrinks);
 
     // Gets ingredient api
     const ingredientAPI = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkName}`
@@ -229,7 +244,11 @@ function displayDrinks(drinkData) {                                 // Passing d
         }
     } 
         getIngred ();
-    }         
+}
+
+function saveDrinks () {
+    console.log("save")
+}
   
 document.getElementById("locationSrch").addEventListener("click", findBars);
 document.getElementById("ingredientSrch").addEventListener("click", findDrinks);

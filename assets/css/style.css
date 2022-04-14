@@ -316,7 +316,7 @@ li {
     margin-bottom: 3px;
 }
 
-.barCard button {
+.barCard button, .drinkCard button {
     margin:0px;
     padding:0px 1px 1px 1px;
     display: block;
