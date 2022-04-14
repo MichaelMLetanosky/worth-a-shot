@@ -5,16 +5,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.13.6/dist/full.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
   <!-- Third Party Links -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <!-- Custom Links -->
-  <link rel="stylesheet" href="./assets/css/reset.css" />
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.13.6/dist/full.css" rel="stylesheet" type="text/css" />
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
   <link rel="icon" href="./assets/images/worth-a-shot-icon.png">
   <link rel="stylesheet" href="./assets/css/style.css" />
   <title>Worth a Shot</title>
@@ -29,12 +30,13 @@
     <header>
       <div class="inside">
           <div class="logo">
-              <div>
-                <h1>Worth a Shot<img src="./assets/images/shot (1).png" alt="shot-icon"></h1> 
+              <div class="titleLogo">
+                <h1>Worth a Shot</h1> 
+                <img src="./assets/images/shot (1).png" class="shotglass" alt="shot-icon">
               </div>
           </div>
           <nav>
-              <li><span><a href="favorites.html" class="button">Favorites</a></span></li>
+              <li><span><a href="favorites.html" class="button" id= "favoritesBtn">Favorites</a></span></li>
           </nav>
       </div>
   </header>
@@ -43,7 +45,7 @@
       <!-- Drink Search -->
       <section>
         <form>
-          <label for="ingredient">Enter any ingredient you want in your drink:</label>
+          <label for="ingredient" >Enter any ingredient you want in your drink:</label>
           <input type="text" class="searchField" id="ingredient" name="ingredient" placeholder="Vodka">
           <button class="btn0 search-border" id="ingredientSrch">Search for my drink!</button>
         </form>
