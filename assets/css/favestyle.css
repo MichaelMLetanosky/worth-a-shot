@@ -53,18 +53,33 @@ body nav .button:hover{
   }
 /* end of title */
 
-main {
-  color: white;
-  margin: 5px 15%;
-  border-radius: 10px;
-  background-color: black;
-  opacity: 92%;
-}
-
 h1 {
   margin: 30px 0px 15px;
   color: white;
   text-align: center;
   font-size: 22px;
   font-weight: 200;
+}
+
+main {
+  color: white;
+  margin: 20px 15%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: black;
+  opacity: 92%;
+  display: none;
+}
+
+main h2 {
+  font-size: 18px;
+  text-decoration: underline;
+  display: none;
+}
+
+#favDrinkCont, #favBarCont {
+  margin: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
 }
