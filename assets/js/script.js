@@ -10,7 +10,6 @@ function findBars(event) {
     //Checks that a city name was entered
     let cityName = document.getElementById("place").value;
     if (!cityName) {
-        alert("Please enter the name of a city");
         return;
     };
 
@@ -47,7 +46,6 @@ function showBars(x, y) {
         .then(response => {
             //Check that response came back good
             if (!response.ok) {
-                alert("Could not find location, please try again");
                 return;
             };
 
