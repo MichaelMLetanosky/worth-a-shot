@@ -105,10 +105,10 @@ header nav li {
     display: flex;
     height: 100%;
     float: left;
-    margin-right: 30px;
+    margin-right: 50px;
     justify-content: flex-end;
     align-items: flex-end;
-    font: "Roboto Slab";
+    font-family: "Roboto Slab";
 }
 
 header nav li:last-of-type {
@@ -273,34 +273,31 @@ li {
     text-align: center;
     border-radius: 15px;
     overflow: hidden;
+    position: relative;
 }
 
 .drinkCard:hover,
 .barCard:hover {
     background-color: var(--main-orange);
-    /* color: white; */
     transform: scale(1.03);
     transition: all 1s ease;
 }
 
-h2 {
+.drinkCard h2 {
+    color: black;
     margin-top: 5px;
     font-family: 'Luckiest Guy', cursive;
     font-size: 20px;
 }
 
-img {
+.drinkCard img {
     height: auto;
     width: auto;
     max-width: 229px;
-    max-height: 229px;
-    margin-bottom: 3px;
-    /* background-size: cover; */
-    margin: 3px 3px 0px 3px;
-    width: 48%;
+    max-height: 290px;
+    margin: 0 auto;
     background-color: var(--cardcolor);
     position: relative;
-
 }
 
 .barCard a {
@@ -318,24 +315,26 @@ img {
     max-width: 413px;
     max-height: 229px;
     margin-bottom: 3px;
+    margin: 0 auto;
 }
 
-p { 
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 3px;
-    padding-right: 3px;
-}
-
-.barCard button {
-    display: block;
+.barCard button, .drinkCard button {
+    margin:0px;
+    padding:0px 1px 1px 1px;
+    display: none;
     border: 1px solid black;
-    border-radius: 3px;
-    padding: 0px 1px;
+    border-radius: 50%;
     position: absolute;
-    bottom: 2px;
+    background-color: var(--main-orange);
+    font-size: 18px;
+    top: 2px;
     right: 2px;
 }
+
+.barCard:hover button, .drinkCard:hover button{
+    display: block;
+}
+
 
 /* Footer */
 
@@ -396,16 +395,37 @@ p {
 }
 
 /*responsive*/
-@media(max-width: 767px) {
+@media(max-width: 1400px) {
+    .drinkCard,
+    .barCard {
+        width: 47%;
+    }
+}
+
+
+@media(max-width: 992px) {
     .footer-col {
         width: 50%;
         margin-bottom: 30px;
+    }
+    main {
+        flex-direction: column;
+    }
+    main section {
+        width: 96%
     }
 }
 
 @media(max-width: 574px) {
     .footer-col {
         width: 100%;
+    }
+    .drinkCard,
+    .barCard{
+        width: 97%;
+    }
+    main {
+        flex-direction: column;
     }
 }
 
