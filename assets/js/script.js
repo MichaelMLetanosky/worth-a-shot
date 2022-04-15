@@ -144,7 +144,6 @@ function findDrinks(event) {
     let ingredientName = document.getElementById("ingredient").value.trim();
     console.log(ingredientName);
     if (!ingredientName) {
-        alert("Please enter an ingredient");
         return;
     };
 
