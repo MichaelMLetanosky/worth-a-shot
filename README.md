@@ -17,7 +17,7 @@ Please see the video down below for the demo:
 ![*Description of a screen shot*](./assets/images/)
 
 ## Indepth analysis
-____ coming soon
+
 
 
 ## Technology Used
@@ -26,10 +26,11 @@ ____ coming soon
 - CSS
 - JavaScript
 - Tailwind CSS
-- Daisyui
+- daisyUI
 - Google Fonts
 - Google places API
 - The Cocktail DB API
+- Just in Mind wireframe
 
 
 ## User's Personal Github Accounts
