@@ -12,12 +12,13 @@ Deployed version can be found [Here](https://michaelmletanosky.github.io/worth-a
 5. When either search engine has found the desired item, there are buttons on the bottom of each card that users can save to their favorites.
 6. Users can then click the 'Favorites' button on the top of the page. This website will show them any of their favorites they have added! They can also click 'Take me back home' on this screen which will return them back to the main page.
 
-Please see the video down below for the demo:
+## Please see the video down below for the demo:
 
 ![](./assets/images/age.gif)
 ![](./assets/images/drink.gif)
 ![](./assets/images/bar.gif)
 
+## Some pictures of the final product!
 
 ![Startup of Page](./assets/images/agemodal.jpg)
 ![Live link deployed](./assets/images/screenshot.jpg)
