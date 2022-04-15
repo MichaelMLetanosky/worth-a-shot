@@ -321,7 +321,7 @@ li {
 .barCard button, .drinkCard button {
     margin:0px;
     padding:0px 1px 1px 1px;
-    display: block;
+    display: none;
     border: 1px solid black;
     border-radius: 50%;
     position: absolute;
@@ -329,6 +329,10 @@ li {
     font-size: 18px;
     top: 2px;
     right: 2px;
+}
+
+.barCard:hover button, .drinkCard:hover button{
+    display: block;
 }
 
 
@@ -391,14 +395,18 @@ li {
 }
 
 /*responsive*/
-@media(max-width: 767px) {
-    .footer-col {
-        width: 50%;
-        margin-bottom: 30px;
-    }
+@media(max-width: 1400px) {
     .drinkCard,
     .barCard {
         width: 47%;
+    }
+}
+
+
+@media(max-width: 992px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
     }
     main {
         flex-direction: column;
