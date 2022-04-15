@@ -67,7 +67,6 @@ main {
   padding: 10px;
   border-radius: 10px;
   background-color: black;
-  opacity: 92%;
   display: none;
 }
 
@@ -78,8 +77,44 @@ main h2 {
 }
 
 #favDrinkCont, #favBarCont {
-  margin: 10px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items: stretch;
+background-color: var(--cardcolor);
+text-align: center;
+overflow: hidden;
+}
+
+.favDrinks, .favBars {
+  margin: 10px 0px;
+  width: 229px;
+  text-align: center;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+#favDrinkCont h2 {
+  color: white;
+  margin-top: 5px;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 20px;
+}
+
+#favBarCont a {
+  margin: auto;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 20px;
+  text-decoration: none;
+  color:white;
+  margin-top: 5px;
+}
+
+#favDrinkCont img, #favBarCont img {
+  max-width: 229px;
+  max-height: 175px;
+  object-fit: cover;
+  margin: 0 auto;
+  background-color: var(--cardcolor);
+  display: block;
 }
