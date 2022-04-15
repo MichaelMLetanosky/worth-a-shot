@@ -14,7 +14,14 @@ Deployed version can be found [Here](https://michaelmletanosky.github.io/worth-a
 
 Please see the video down below for the demo:
 
+![](./assets/images/age.gif)
+![](./assets/images/drink.gif)
+![](./assets/images/bar.gif)
+
+
+![Startup of Page](./assets/images/agemodal.jpg)
 ![Live link deployed](./assets/images/screenshot.jpg)
+![Favorites Page](./assets/images/favescreenshot.jpg)
 
 ## Indepth analysis
 For this project, we wanted to take a fresh approach to a common occurance that happens to the best of us. We found something we could all agree on; we enjoy going out to unique places for a nice drink once in awhile. To take on this project, we decided to make this as user friendly as possible. By navigating through the criteria for the project, we decided to choose two APIs that would compliment eachother well. The first was The Cocktail DB in order to pull data from their API into our site so that when users type an ingredient in the search box, they will get a few cards to generate their results. The second API, Google Places, was a great addition to allow users the chance to look up bars in the city they type in the search box. 
