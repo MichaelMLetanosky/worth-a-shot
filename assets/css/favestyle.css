@@ -8,10 +8,11 @@ body, html {
   .bgimg {
     background-image: url("https://images.pexels.com/photos/2796105/pexels-photo-2796105.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
     opacity: .9;
-    height: 100%;
+    min-height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
   }
 
  /* back to home page button */
@@ -25,7 +26,6 @@ body nav .button {
   padding: 20px;
   font: "Roboto Slab";
   font-size: smaller;
-
 }
 
 body nav .button:hover{
@@ -38,9 +38,7 @@ body nav .button:hover{
 
 /* Title of the page "Favorites */
   .caption {
-      position: absolute;
-      left: 0;
-      top: 10%;
+      padding: 100px 0px 0px;
       width: 100%;
       display: block;
       text-align: center;
@@ -54,3 +52,86 @@ body nav .button:hover{
       letter-spacing: 3px;
   }
 /* end of title */
+
+h1 {
+  margin: 30px 0px 15px;
+  color: white;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 200;
+}
+
+main {
+  color: white;
+  margin: 20px 15%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: black;
+  display: none;
+}
+
+main h2 {
+  font-size: 18px;
+  text-decoration: underline;
+  display: none;
+}
+
+#favDrinkCont, #favBarCont {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items: stretch;
+background-color: var(--cardcolor);
+text-align: center;
+overflow: hidden;
+}
+
+.favDrinks, .favBars {
+  margin: 10px 0px;
+  width: 229px;
+  text-align: center;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.favDrinks:hover,
+.favBars:hover {
+    background-color: var(--main-orange);
+    transform: scale(1.03);
+    transition: all 1s ease;
+}
+
+#favDrinkCont h3 {
+  color: white;
+  margin-top: 5px;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 20px;
+}
+
+#favBarCont a {
+  margin: auto;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 20px;
+  text-decoration: none;
+  color:white;
+  margin-top: 5px;
+}
+
+#favDrinkCont img {
+  max-width: 229px;
+  max-height: 229px;
+  object-fit: cover;
+  margin: 0 auto;
+  background-color: var(--cardcolor);
+  display: block;
+} 
+
+
+#favBarCont img {
+  max-width: 229px;
+  max-height: 175px;
+  object-fit: cover;
+  margin: 0 auto;
+  background-color: var(--cardcolor);
+  display: block;
+}
