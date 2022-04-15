@@ -12,6 +12,7 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
   }
 
  /* back to home page button */
@@ -25,7 +26,6 @@ body nav .button {
   padding: 20px;
   font: "Roboto Slab";
   font-size: smaller;
-
 }
 
 body nav .button:hover{
@@ -38,9 +38,7 @@ body nav .button:hover{
 
 /* Title of the page "Favorites */
   .caption {
-      position: absolute;
-      left: 0;
-      top: 10%;
+      padding: 100px 0px 0px;
       width: 100%;
       display: block;
       text-align: center;
@@ -54,3 +52,19 @@ body nav .button:hover{
       letter-spacing: 3px;
   }
 /* end of title */
+
+main {
+  color: white;
+  margin: 5px 15%;
+  border-radius: 10px;
+  background-color: black;
+  opacity: 92%;
+}
+
+h1 {
+  margin: 30px 0px 15px;
+  color: white;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 200;
+}
