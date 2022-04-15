@@ -117,7 +117,17 @@ overflow: hidden;
   margin-top: 5px;
 }
 
-#favDrinkCont img, #favBarCont img {
+#favDrinkCont img {
+  max-width: 229px;
+  max-height: 229px;
+  object-fit: cover;
+  margin: 0 auto;
+  background-color: var(--cardcolor);
+  display: block;
+} 
+
+
+#favBarCont img {
   max-width: 229px;
   max-height: 175px;
   object-fit: cover;

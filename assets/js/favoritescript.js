@@ -40,31 +40,48 @@ function buildDrinkCards () {
         favDrinkCard.classList.add("favDrinks");
         document.querySelector("#favDrinkCont").appendChild(favDrinkCard);
 
-        //Set Photo
+        //Set Drink Photo
         let favDrinkPhotoCont = document.createElement("img");
         favDrinkPhotoCont.src = favDrinkData[i].Photo;
         favDrinkCard.appendChild(favDrinkPhotoCont);
         
-        // Set Bar Name
-        let favBarNameCont = document.createElement("a")
-        favBarNameCont.innerHTML = favDrinkData[i].Name;
-        favBarNameCont.setAttribute ("href", favDrinkData[i].url);
-        favDrinkCard.appendChild(favBarNameCont);
+        // Set Drink Name
+        let favDrinkNameCont = document.createElement("h3");
+        favDrinkNameCont.innerHTML = favDrinkData[i].Name;
+        favDrinkCard.appendChild(favDrinkNameCont);
 
-        // Set Bar Address
-        let favBarAddressCont = document.createElement("p");
-        favBarAddressCont.innerHTML = favDrinkData[i].Address;
-        favDrinkCard.appendChild(favBarAddressCont);
+        // Gets ingredient api (code found from Michael Burrows https://dev.to/michaelburrows/fetch-display-data-from-a-remote-api-using-javascript-2p9o)
+        const ingredientAPI = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${favDrinkData[i].Name}`
+        async function getIngred() {
+            const response = await fetch (ingredientAPI);
+            const data = await response.json();
+            const cocktail = data.drinks[0];
+            
+            // Adds ul element
+            const cocktailIngredients = document.createElement ("ul");
+            
+            favDrinkCard.appendChild(cocktailIngredients);
+            // pulls ingredients from created object and displays to cards
+            const getIngredients = Object.keys(cocktail)
+                .filter(function (ingredient) {
+                return ingredient.indexOf("strIngredient") == 0;
+                })
+                .reduce(function (ingredients, ingredient) {
+                if (cocktail[ingredient] != null) {
+                    ingredients[ingredient] = cocktail[ingredient];
+                }
+                return ingredients;
+                }, {});
 
-        // Set Bar Phone
-        let favBarPhoneCont = document.createElement("p");
-        favBarPhoneCont.innerHTML = `Phone: ${favDrinkData[i].Phone}`;
-        favDrinkCard.appendChild(favBarPhoneCont);
+            for (let key in getIngredients) {
+                let value = getIngredients[key];
+                listItem = document.createElement("li");
+                listItem.innerHTML = value;
+                cocktailIngredients.appendChild(listItem);
+            }
+        } 
 
-        // Set Bar Rating
-        let favBarRatingCont = document.createElement("p");
-        favBarRatingCont.innerHTML = `Rating: ${favDrinkData[i].Rating}`;
-        favDrinkCard.appendChild(favBarRatingCont);
+        getIngred ();
     };
 };
 
