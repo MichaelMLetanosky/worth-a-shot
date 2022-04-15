@@ -19,7 +19,6 @@ function findBars(event) {
         .then(response => {
             //Check that response came back good
             if (!response.ok) {
-                alert("Could not find location, please try again");
                 return;
             };
 
