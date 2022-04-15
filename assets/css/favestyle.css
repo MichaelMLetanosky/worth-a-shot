@@ -8,6 +8,7 @@ body, html {
   .bgimg {
     background-image: url("https://images.pexels.com/photos/2796105/pexels-photo-2796105.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
     opacity: .9;
+    min-height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
