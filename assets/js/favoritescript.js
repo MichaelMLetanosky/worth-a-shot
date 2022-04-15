@@ -32,6 +32,40 @@ function buildFavorites() {
 //Generate Drink Cards
 function buildDrinkCards () {
 
+    // Displays Title of Section
+    document.querySelector("#favDrinkTitle").style.display = "block";
+    
+    for (i=0; i < favDrinkData.length; i++) {
+        let favDrinkCard = document.createElement("div");
+        favDrinkCard.classList.add("favDrinks");
+        document.querySelector("#favDrinkCont").appendChild(favDrinkCard);
+
+        //Set Photo
+        let favDrinkPhotoCont = document.createElement("img");
+        favDrinkPhotoCont.src = favDrinkData[i].Photo;
+        favDrinkCard.appendChild(favDrinkPhotoCont);
+        
+        // Set Bar Name
+        let favBarNameCont = document.createElement("a")
+        favBarNameCont.innerHTML = favDrinkData[i].Name;
+        favBarNameCont.setAttribute ("href", favDrinkData[i].url);
+        favDrinkCard.appendChild(favBarNameCont);
+
+        // Set Bar Address
+        let favBarAddressCont = document.createElement("p");
+        favBarAddressCont.innerHTML = favDrinkData[i].Address;
+        favDrinkCard.appendChild(favBarAddressCont);
+
+        // Set Bar Phone
+        let favBarPhoneCont = document.createElement("p");
+        favBarPhoneCont.innerHTML = `Phone: ${favDrinkData[i].Phone}`;
+        favDrinkCard.appendChild(favBarPhoneCont);
+
+        // Set Bar Rating
+        let favBarRatingCont = document.createElement("p");
+        favBarRatingCont.innerHTML = `Rating: ${favDrinkData[i].Rating}`;
+        favDrinkCard.appendChild(favBarRatingCont);
+    };
 };
 
 //Generate Bar Cards
@@ -41,7 +75,6 @@ function buildBarCards () {
     document.querySelector("#favBarTitle").style.display = "block";
     
     for (i=0; i < favBarData.length; i++) {
-        // let favBarCard = document.createElement("div")
         let favBarCard = document.createElement("div");
         favBarCard.classList.add("favBars");
         document.querySelector("#favBarCont").appendChild(favBarCard);

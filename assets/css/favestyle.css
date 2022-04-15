@@ -94,6 +94,13 @@ overflow: hidden;
   overflow: hidden;
 }
 
+.favDrinks:hover,
+.favBars:hover {
+    background-color: var(--main-orange);
+    transform: scale(1.03);
+    transition: all 1s ease;
+}
+
 #favDrinkCont h2 {
   color: white;
   margin-top: 5px;
